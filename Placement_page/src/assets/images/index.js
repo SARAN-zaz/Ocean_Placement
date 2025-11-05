@@ -1,3 +1,6 @@
+import GettingStarted from './GettingStarted.png';
+
+
 import industry from './industry.svg';
 import practical from './practical.svg';
 import placement from './placement.svg';
@@ -15,6 +18,8 @@ import resume from './resume.svg'
 import dev from './dev.svg'
 
 
+import Profile from './Profile.svg'
+
 export const images = {
   trainer,
   training_project, 
@@ -27,5 +32,7 @@ export const images = {
   practical,
   placement,
   trust,
-  dev
+  dev,
+  GettingStarted,
+  Profile
 };
