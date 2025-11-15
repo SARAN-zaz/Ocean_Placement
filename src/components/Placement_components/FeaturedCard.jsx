@@ -8,7 +8,7 @@ export default function FeaturedCard() {
         <div className="flex justify-center text-center pt-[50px] ">
           <h1 className="text-[22px] sm:text-[26px] md:text-[30px] font-bold">
             Make Waves in Your Career with{" "}
-            <span className="text-[#00AEFF]">Ocean Academy</span>
+            <span className="bg-linear-to-r from-[#0E90CF] via-[#0E90CF] to-[#217098] bg-clip-text text-transparent">Ocean Academy</span>
           </h1>
         </div>
 

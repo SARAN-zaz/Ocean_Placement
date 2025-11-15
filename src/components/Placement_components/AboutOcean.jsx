@@ -2,8 +2,8 @@ import images from "../../assets/Images";
 
 export default function AboutOcean() {
   return (
-    <section className="flex flex-col justify-center  bg-[#F6F9FA] pt-[50px] p-4 ">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 bg-[#F6F9FA]  w[80%] mx-auto max-w-[1200px]">
+    <section className="flex flex-col justify-center   pt-[50px] p-4 ">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 bg-white  w[80%] mx-auto max-w-[1200px]">
         {/* Left Text Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className=" sm:text-xl font-semibold text-[#00aeff] ">
@@ -11,7 +11,7 @@ export default function AboutOcean() {
           </p>
           <h1 className="text-[24px] md:text-[35px] font-semibold">
             Empowering Futures with{" "}
-            <span className="text-[#00AEFF]">Innovative Education</span>
+            <span className="bg-linear-to-r from-[#0E90CF] via-[#0E90CF] to-[#217098] bg-clip-text text-transparent">Innovative Education</span>
           </h1>
           <p className="text-[#5c5a5a] text-sm sm:text-base leading-relaxed mt-10  ml-0 lg:ml-10">
             As a Training and placement cell, We enhance student careers through
