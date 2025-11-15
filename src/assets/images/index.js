@@ -72,7 +72,26 @@ import ProjectSeven from './ProjectSeven.jpg'
 import ProjectEight from './ProjectEight.jpg'
 import ProjectNine from './ProjectNine.jpg'
 import ProjectTen from './ProjectTen.jpg'
-import java from './java.jpg'
+import angular from './angular.svg';
+import bootstrap from './bootstrap.svg';
+import c from './c.svg';
+import cpp from './cpp.svg';
+import css from './css.svg';
+import analytics from './analytics.svg';
+// import django from './django.svg';
+import flutter from './flutter.svg';
+// import html from './html.svg';
+import java from './java.svg';
+import js from './js.svg';
+import mongodb from './mongodb.svg';
+// import mysql from './mysql.svg';
+// import node from './node.svg';
+// import python from './python.svg';
+import react from './react.svg';
+// import testing from './testing.svg';
+import spring from './spring.svg';
+// import uiux from './uiux.svg';
+
 
 
 
@@ -128,7 +147,26 @@ const  images = {
   ProjectEight,
   ProjectNine,
   ProjectTen,
-  java
+ angular,
+bootstrap,
+c,
+cpp,
+css,
+analytics,
+// django,
+flutter,
+// html,
+java,
+js,
+mongodb,
+// // mysql,
+// // node,
+// // python,
+react,
+// // testing,
+spring,
+// // uiux,
+
 
 
 };
