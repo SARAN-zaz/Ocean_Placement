@@ -1,4 +1,4 @@
-import { images } from "../../assets/images";
+import images from "../../assets/Images";
 
 export default function AboutSection() {
   return (

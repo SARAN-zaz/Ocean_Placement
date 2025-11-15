@@ -47,8 +47,36 @@ import Shop from './Shop.svg'
 import Timer from './Timer.svg'
 
 
+// Maarison Images
+import Book from "./Book.svg";
+import students from "./students.svg";
+import success from "./success.svg";
+import technology from "./technology.svg";
+import developer from "./developer.svg";
+import tag from "./tag.svg";
+import search from "./search.svg";
+import projectIdea from "./projectIdea.svg";
+import shedule from './shedule.svg'
+import Project2 from './Project2.svg'
+import Project3 from './Project3.svg'
+import Project4 from './Project4.svg'
+import Project5 from './Project5.svg'
+import Project6 from './Project6.svg'
+import ProjectOne from './ProjectOne.jpg'
+import ProjectTwo from './ProjectTwo.jpg'
+import ProjectThree from './ProjectThree.jpg'
+import ProjectFour from './ProjectFour.jpg'
+import ProjectFive from './ProjectFive.jpg'
+import ProjectSix from './ProjectSix.jpg'
+import ProjectSeven from './ProjectSeven.jpg'
+import ProjectEight from './ProjectEight.jpg'
+import ProjectNine from './ProjectNine.jpg'
+import ProjectTen from './ProjectTen.jpg'
+import java from './java.jpg'
 
-export const images = {
+
+
+const  images = {
   trainer,
   training_project, 
   flexible_class,
@@ -73,5 +101,38 @@ export const images = {
   hemanth,Aswin,Kowsalya,thamizharasan,Bhavani,Gopinath,porselvan,Sathish,Madhan,Shiek,Iyyanar,Arthi,
   E_COMMERCE,
 
-  Productmanagement,Shop,Timer
+  Productmanagement,Shop,Timer,
+
+// Maarison Page Imported Image
+  Book,
+  students,
+  success,
+  technology,
+  developer,
+  tag,
+  search,
+  projectIdea,
+  shedule,
+  Project2,
+  Project4,
+  Project5,
+  Project6,
+  Project3,
+  ProjectOne,
+  ProjectTwo,
+  ProjectThree,
+  ProjectFour,
+  ProjectFive,
+  ProjectSix,
+  ProjectSeven,
+  ProjectEight,
+  ProjectNine,
+  ProjectTen,
+  java
+
+
 };
+
+
+
+export default images;

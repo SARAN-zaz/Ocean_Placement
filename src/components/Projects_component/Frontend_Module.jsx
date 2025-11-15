@@ -112,7 +112,7 @@ export default function ModuleList() {
                   {module.description}
                 </div>
                 <div className="p-10 sm:p-10 md:p-10 lg:p-10">
-                <div className="bg-[#D9F1FF] mb-4 p-4 rounded-lg shadow-sm max-w-[720px] mx-auto border-l-[12px] border-[#00AEFF] ">
+                <div className="bg-[#D9F1FF] mb-4 p-4 rounded-lg shadow-sm max-w-[720px] mx-auto border-l-12 border-[#00AEFF] ">
                   <h3 className="text-[#00AEFF] font-semibold text-center mb-2">
                     Key Features
                   </h3>

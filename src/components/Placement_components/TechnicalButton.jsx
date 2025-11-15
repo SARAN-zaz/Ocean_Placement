@@ -1,5 +1,6 @@
 import { FaArrowRightLong } from "react-icons/fa6";
-import { images } from "../../assets/images";
+import images from "../../assets/Images";
+
 
 export default function TechnicalButton() {
   return (
@@ -7,7 +8,7 @@ export default function TechnicalButton() {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 bg-[#D9F1FF] rounded-2xl shadow-lg w-[80%] max-w-5xl mx-auto p-5 leading-relaxed">
         
         {/* ✅ Smaller & Centered Image Container */}
-        <div className="flex items-center justify-center bg-gradient-to-r from-[#00AEFF] via-[#0E90CF] to-[#08618d] rounded-2xl shadow-lg w-[90px] sm:w-[100px] md:w-[110px] h-[90px] sm:h-[100px] md:h-[110px]">
+        <div className="flex items-center justify-center bg-linear-to-r from-[#00AEFF] via-[#0E90CF] to-[#08618d] rounded-2xl shadow-lg w-[90px] sm:w-[100px] md:w-[110px] h-[90px] sm:h-[100px] md:h-[110px]">
           <img
             src={images.dev}
             alt="Development Icon"
@@ -28,7 +29,7 @@ export default function TechnicalButton() {
 
         {/* Button Section */}
         <div className="mt-5 lg:mt-0">
-          <button className="flex items-center justify-center gap-2 rounded-xl shadow-lg w-full sm:w-60 md:w-[270px] h-[45px] sm:h-[50px] px-6 bg-gradient-to-r from-[#00AEFF] via-[#0E90CF] to-[#08618d] text-white font-semibold text-sm sm:text-base">
+          <button className="flex items-center justify-center gap-2 rounded-xl shadow-lg w-full sm:w-60 md:w-[270px] h-[45px] sm:h-[50px] px-6 bg-linear-to-r from-[#00AEFF] via-[#0E90CF] to-[#08618d] text-white font-semibold text-sm sm:text-base">
             Technical Training <FaArrowRightLong />
           </button>
         </div>
