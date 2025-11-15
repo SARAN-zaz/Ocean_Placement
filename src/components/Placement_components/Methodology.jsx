@@ -41,7 +41,7 @@ export default function Methodology() {
     <section className="mt-10 mb-10 w-[90%] max-w-[1200px] mx-auto ">
       {/* Heading Section */}
       <div className="text-center">
-        <p className="sm:text-xl font-semibold text-[#00aeff]">Our Methodology</p>
+        <p className="sm:text-xl font-semibold bg-linear-to-r from-[#0E90CF] via-[#0E90CF] to-[#217098] bg-clip-text text-transparent">Our Methodology</p>
         <h1 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[24px] font-semibold mt-1">
           Your Journey to Success
         </h1>

@@ -1,6 +1,6 @@
 export default function HeaderSection() {
   return (
-    <section className="relative bg-gradient-to-r from-[#034E72] to-[#00AEFF] text-center py-16 px-4 text-white overflow-hidden">
+    <section className="relative bg-linear-to-r from-[#034E72] to-[#00AEFF] text-center py-16 px-4 text-white overflow-hidden">
       {/* Floating Shapes */}
       <div className="absolute w-16 h-16 bg-[#00AEFF] opacity-20 rounded-full animate-moveY-fast top-3/4 left-60"></div>
       <div className="absolute w-16 h-16 bg-white opacity-20 rounded-full animate-moveY-medium top-10 right-60"></div>
