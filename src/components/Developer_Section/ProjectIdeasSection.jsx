@@ -6,11 +6,11 @@ const ProjectIdeasSection = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-10">
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
+        <div className="w-full md:w-1/2  md:text-left flex flex-col justify-center">
           <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-5">
             Inspiring Project Ideas
           </h1>
-          <p className="mb-6 text-[black] text-[16px]  md:leading-8">
+          <p className="mb-6 text-[#5C5454] text-[16px]  md:leading-8">
             Our Academy has a placement cell that helps students find jobs after graduation.
             The cell works with companies to bring job opportunities to campus and helps
             students prepare for interviews. The placement cell also provides training and

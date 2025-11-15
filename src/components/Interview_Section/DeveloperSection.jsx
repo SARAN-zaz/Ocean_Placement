@@ -23,27 +23,62 @@ const DeveloperSection = () => {
           advanced frameworks, we’ve got you covered.
         </p>
 
-        <button className="bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899] text-white font-semibold px-5 py-3 rounded-lg flex items-center gap-2 shadow-md mt-13">
-          <img src={images.developer} alt="" className="w-5 h-5" />
-          Project Innovation Hub
-        </button>
+      <button
+  className="
+    bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899]
+    text-white font-semibold px-5 py-3 rounded-lg flex items-center gap-2 
+    shadow-md mt-13 transition-all duration-300 
+    hover:scale-[1.05] hover:shadow-[0_10px_25px_rgba(0,174,255,0.4)]
+    active:scale-[0.97] cursor-pointer
+  "
+>
+  <img
+    src={images.developer}
+    alt=""
+    className="w-5 h-5 transition-transform duration-300 group-hover:scale-125 hover:rotate-6"
+  />
+  Project Innovation Hub
+</button>
+
       </div>
 
 
-      <div className="grid grid-cols-2 gap-8 w-full md:w-1/2 max-w-[500px]">
-        {stats.map((item, index) => (
-          <div
-            key={index}
-            className="bg-[#D9E8FF] flex flex-col justify-center items-start p-5 gap-2 rounded-2xl shadow-sm aspect-[1.5/1]"
-          >
-            <img src={item.img} alt={item.label} className="w-[30px] h-[30px]" />
-            <p className="text-gray-700 text-sm">{item.label}</p>
-            <h1 className="text-2xl font-bold text-[#000000]">
-              {item.value}
-            </h1>
-          </div>
-        ))}
+
+<div className="grid grid-cols-2 gap-8 w-full md:w-1/2 max-w-[500px]">
+  {stats.map((item, index) => (
+    <div
+      key={index}
+      className="
+        group bg-[#D9E8FF] flex flex-col justify-center items-start p-5 gap-3
+        rounded-2xl shadow-sm aspect-[1.5/1] transition-all duration-300
+        ring-0 ring-[#00A8FF]/0 hover:ring-[3px] hover:ring-[#00A8FF]/70
+      "
+    >
+      {/* Icon Wrapper */}
+      <div
+        className="
+          w-12 h-12 flex justify-center items-center rounded-xl bg-white
+          shadow-sm ring-0 ring-[#00A8FF]/0 transition-all duration-300 
+          group-hover:ring-2 group-hover:ring-[#00A8FF]/70 group-hover:scale-110
+        "
+      >
+        <img
+          src={item.img}
+          alt={item.label}
+          className="w-[26px] h-[26px] transition-transform duration-300 group-hover:scale-125"
+        />
       </div>
+
+      <p className="text-gray-700 text-sm tracking-wide">{item.label}</p>
+      <h1 className="text-2xl font-bold text-[#000000]">{item.value}</h1>
+    </div>
+  ))}
+</div>
+
+
+
+
+
     </div>
   );
 };

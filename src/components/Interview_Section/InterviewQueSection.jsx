@@ -71,31 +71,31 @@ const InterviewQue = () => {
   },
   ];
 
-  return (
+return (
     <div className="my-15 max-w-[1200px] w-[90%] mx-auto">
-      {/* Section Title */}
-      <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-10 text-left">
+      <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-10">
         HR Interview Questions & Answers
       </h1>
 
-      {/* Accordion List */}
       {hrInterviewQuestions.map((faq, index) => {
         const isOpen = openIndex === index;
+
         return (
           <div
             key={index}
-            className={`w-full rounded-lg overflow-hidden mb-1 ${
-              isOpen
-                ? "border border-[#00AEFF] shadow-[0_6px_15px_rgba(0,174,255,0.2)]"
-                : "border border-transparent"
-            }`}
+            className={`w-full rounded-lg overflow-hidden mb-1 transition-all duration-300
+              ${
+                isOpen
+                  ? "border border-[#00AEFF] shadow-[0_6px_15px_rgba(0,174,255,0.2)]"
+                  : "border border-transparent"
+              }`}
           >
-            {/* Question Header */}
+            {/* Header */}
             <button
               onClick={() => toggleDropdown(index)}
-              className="w-full flex justify-between items-center px-6 py-4 text-left"
+              className="w-full flex justify-between items-center px-6 py-4"
             >
-              <p className="font-normal text-black">{faq.question}</p>
+              <p className="font-medium text-black">{faq.question}</p>
               {isOpen ? (
                 <ChevronUp className="w-5 h-5 text-gray-600" />
               ) : (
@@ -103,16 +103,15 @@ const InterviewQue = () => {
               )}
             </button>
 
-            {/* Dropdown Content */}
-            {isOpen && (
-              <div className="px-6 pb-4">
-                <p className="text-gray-500 font-medium leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            )}
+            {/* Smooth Transition Content */}
+            <div
+              className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                isOpen ? "max-h-[400px] opacity-100 py-4 px-6" : "max-h-0 opacity-0"
+              }`}
+            >
+              <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
+            </div>
 
-            {/* Blue Bottom Line */}
             {isOpen && <div className="h-2 bg-[#00AEFF] w-full rounded-b-lg" />}
           </div>
         );

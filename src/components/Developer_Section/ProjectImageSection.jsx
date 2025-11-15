@@ -15,33 +15,59 @@ const ProjectImageSection = () => {
   ];
 
   return (
-    <section className="max-w-[1200px] w-[90%] mx-auto py-10 mt-10">
+    <section className="py-16">
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-16 overflow-y-auto pr-8"
-        style={{
-          height: "700px",
-        }}
+        className="
+          max-w-[1200px] w-[90%] mx-auto p-8 rounded-2xl 
+          shadow-[0_10px_30px_rgba(0,0,0,0.15)]
+          bg-white
+        "
       >
-        {projects.map((project, index) => (
+        <div
+          style={{ height: "700px", overflowY: "auto", overflowX: "visible", padding: "10px" }}
+        >
           <div
-            key={index}
-            className="text-center bg-white rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)] hover:scale-[1.03] transition-all duration-300 p-4 cursor-pointer"
+            className="
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+              gap-x-10 gap-y-16
+            "
+            style={{ overflow: "visible" }}
           >
-            <div className="w-full h-[260px] overflow-hidden rounded-lg">
-              <img
-                src={project.src}
-                alt={project.title}
-                className="w-full h-full object-contain transition-transform duration-300"
-              />
-            </div>
-            <h1 className="mt-5 text-[20px] font-semibold text-[#00AEFF]">
-              {project.title}
-            </h1>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="
+                  group text-center bg-white rounded-xl cursor-pointer 
+                  transition-all duration-300 p-4
+                  border border-transparent
+                  shadow-[0_5px_15px_rgba(0,0,0,0.10)]
+                  hover:shadow-[0_12px_25px_rgba(0,0,0,0.20)]
+                  hover:border-[#00AEFF]
+                  hover:scale-[1.015]
+                "
+                style={{ overflow: "visible" }}
+              >
+                <div className="w-full h-[260px] overflow-visible rounded-lg">
+                  <img
+                    src={project.src}
+                    alt={project.title}
+                    className="
+                      w-full h-full object-contain  
+                      transition-transform duration-300
+                      group-hover:scale-105
+                    "
+                  />
+                </div>
+
+                <h1 className="mt-5 text-[20px] font-semibold text-[#00AEFF]">
+                  {project.title}
+                </h1>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Custom scrollbar styling */}
       <style jsx>{`
         div::-webkit-scrollbar {
           width: 10px;

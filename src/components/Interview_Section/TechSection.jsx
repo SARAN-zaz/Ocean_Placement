@@ -2,32 +2,31 @@ import { useState } from "react";
 import images from "../../assets/Images";
 
 const TechSection = () => {
-  const techs = [
-    { name: "Java", questions: 50, bg: "linear-gradient(to right, #2D8FED, #0FADDA)" },
-    { name: "Python", questions: 50, bg: "#40C79A" },
-    { name: "C", questions: 50, bg: "#A855F7" },
-    { name: "C++", questions: 50, bg: "#F97316" },
-    { name: "JavaScript", questions: 50, bg: "#EC4899" },
-    { name: "Nodejs", questions: 50, bg: "#1D4ED8" },
-    { name: "MySQL", questions: 50, bg: "#16A34A" },
-    { name: "MongoDB", questions: 50, bg: "#000000" },
-    { name: "Reactjs", questions: 50, bg: "#2563EB" },
-    { name: "Angular", questions: 50, bg: "#EAB308" },
-    { name: "Flutter", questions: 50, bg: "#EAB308" },
-    { name: "UI/UX", questions: 50, bg: "#EAB308" },
-    { name: "Django", questions: 50, bg: "#EAB308" },
-    { name: "HTML", questions: 50, bg: "#EAB308" },
-    { name: "CSS", questions: 50, bg: "#EAB308" },
-    { name: "Software Testing", questions: 50, bg: "#EAB308" },
-    { name: "Bootstrap", questions: 50, bg: "#EAB308" },
-    { name: "SpringBoot", questions: 50, bg: "#EAB308" },
-    { name: "Data Analytics", questions: 50, bg: "#EAB308" },
-  ];
+const techs = [
+  { name: "Angular", bg: "linear-gradient(to right, #e52d27, #b31217)" },
+  { name: "Bootstrap", bg: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)" },
+  { name: "C", bg: "linear-gradient(to right, #654ea3, #eaafc8)" },
+  { name: "C++", bg: "linear-gradient(to right, #F7971E, #FFD200)" },
+  { name: "CSS", bg: "linear-gradient(to right, #4facfe, #00f2fe)" },
+  { name: "Data Analytics", bg: "linear-gradient(to right, #42275a, #734b6d)" },
+  { name: "Django", bg: "linear-gradient(to right, #0f9b0f, #000000)" },
+  { name: "Flutter", bg: "linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB)" },
+  { name: "HTML", bg: "linear-gradient(to right, #f12711, #f5af19)" },
+  { name: "Java", bg: "linear-gradient(to right, #FF512F, #DD2476)" },
+  { name: "JavaScript", bg: "linear-gradient(to right, #FFE259, #FFA751)" },
+  { name: "MongoDB", bg: "linear-gradient(to right, #0F2027, #203A43, #2C5364)" },
+  { name: "MySQL", bg: "linear-gradient(to right, #2b5876, #4e4376)" },
+  { name: "Nodejs", bg: "linear-gradient(to right, #16A085, #F4D03F)" },
+  { name: "Python", bg: "linear-gradient(to right, #1CB5E0, #000851)" },
+  { name: "Reactjs", bg: "linear-gradient(to right, #396afc, #2948ff)" },
+  { name: "Software Testing", bg: "linear-gradient(to right, #8E2DE2, #4A00E0)" },
+  { name: "SpringBoot", bg: "linear-gradient(to right, #11998e, #38ef7d)" },
+  { name: "UI/UX", bg: "linear-gradient(to right, #FF0099, #493240)" },
+];
 
-  // state for search term
+
   const [searchTerm, setSearchTerm] = useState("");
 
-  // filter logic
   const filteredTechs = techs.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -55,33 +54,36 @@ const TechSection = () => {
         </h1>
       </div>
 
-      {/* Scrollable container */}
       <div className="max-w-[1200px] w-[90%] mx-auto mt-10 overflow-x-auto pb-3">
         <div
           className="flex gap-6 sm:gap-8 pb-8 pr-4"
-          style={{
-            width: "max-content",
-          }}
+          style={{ width: "max-content" }}
         >
           {filteredTechs.length > 0 ? (
             filteredTechs.map((item, i) => (
               <div
                 key={i}
-                className="h-[138px] w-[216px] border-0 rounded-xl shrink-0 flex flex-col justify-center items-start pl-7 bg-white transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_10px_25px_rgba(0,0,0,0.25)] cursor-pointer"
-                style={{
-                  boxShadow: "0px 4px 15px rgba(0,0,0,0.15)",
-                }}
+                className="
+                  group h-[138px] w-[216px] rounded-xl shrink-0 bg-white 
+                  flex flex-col justify-center items-start pl-7 
+                  transition-all duration-300 cursor-pointer
+                  shadow-[0px_4px_15px_rgba(0,0,0,0.15)]
+                "
               >
                 <div
-                  className="w-[45px] h-[35px] flex justify-center items-center rounded-[5px]"
+                  className="
+                    w-[45px] h-[35px] rounded-md flex justify-center items-center 
+                    transition-all duration-300 
+                    group-hover:scale-125 group-hover:shadow-[0_0_10px_rgba(255,255,255,0.7)]
+                  "
                   style={{ background: item.bg }}
                 >
                   <img src={images.tag} alt="" className="w-6 h-6" />
                 </div>
+
                 <p className="mt-2 text-sm font-semibold text-[#00AEFF]">
                   {item.name}
                 </p>
-                {/* <p className="text-sm text-gray-600">{item.questions} Questions</p> */}
               </div>
             ))
           ) : (
@@ -90,7 +92,6 @@ const TechSection = () => {
         </div>
       </div>
 
-      {/* Custom scrollbar styling */}
       <style jsx>{`
         div::-webkit-scrollbar {
           height: 10px;
