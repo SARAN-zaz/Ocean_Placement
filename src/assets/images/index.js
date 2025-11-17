@@ -1,13 +1,14 @@
+// About Ocean
 import GettingStarted from './GettingStarted.png';
 
-
+// About Section
 import Learning from './Learning.svg';
 import practical from './practical.svg';
 import placement from './placement.svg';
 import trust from './trust.svg';
 
-
-import trainer  from './trainer.svg';
+// Featured cards section
+import Trainer from './Trainer.svg';
 import training_project  from './training_project.svg';
 import flexible_class from './flexible_class.svg'
 import certification from './certification.svg'
@@ -15,18 +16,20 @@ import weekly_assesment from './weekly_assesment.svg'
 import cost_effective from './cost_effective.svg'
 import resume from './resume.svg'
 
-import dev from './dev.svg'
 
-import Profile from './Profile.svg'
 
+
+
+
+// Methodology Section 
 import Enrollment from './Enrollment.svg'
-import Hired from './Hired.svg'
 import learn from './learn.svg'
 import Portfolio from './Portfolio.svg'
+import Hired from './Hired.svg'
 
 import Arrow from './Arrow.svg'
-import book from './book.svg'
 
+//Placed student section
 import hemanth from './hemanth.jpg'
 import Aswin from './Aswin.jpg'
 import Kowsalya from './Kowsalya.jpg'
@@ -39,7 +42,18 @@ import Madhan from './mathan.jpg'
 import Shiek from './Sheikk.jpg'
 import Iyyanar from './iyyanar.jpeg'
 import Arthi from './Arthi.jpg'
+import Wasim from './Wasim.jpg'
+import Ashwin from './Ashwin.jpeg'
+import Imran from './Imran.jpg'
+import Kavinila from './Kavinila.jpg'
+import Ajay from './Ajay.jpg'
+import Pushpaja from './Pushpaja.jpg'
+import Loubna from './Loubna.png'
+import Mathew from './Mathew.png'
+import Priyatharshini from './Priyatharshini.jpg'
 
+
+//Project Module section
 import E_COMMERCE from './E-COMMERCE.png'
 
 import Productmanagement from './Productmanagement.svg'
@@ -96,7 +110,7 @@ import spring from './spring.svg';
 
 
 const  images = {
-  trainer,
+  Trainer,
   training_project, 
   flexible_class,
   certification,
@@ -107,20 +121,40 @@ const  images = {
   practical,
   placement,
   trust,
-  dev,
   GettingStarted,
-  Profile,
   Enrollment,
   Hired,
   learn,
   Portfolio,
   Arrow,
-  book,
 
-  hemanth,Aswin,Kowsalya,thamizharasan,Bhavani,Gopinath,porselvan,Sathish,Madhan,Shiek,Iyyanar,Arthi,
+
+  hemanth,
+  Aswin,
+  Kowsalya,
+  thamizharasan,
+  Bhavani,
+  Gopinath,
+  porselvan,
+  Sathish,
+  Madhan,
+  Shiek,
+  Iyyanar,
+  Arthi,
+  Wasim,
+  Ashwin,
+  Imran,
+  Kavinila,
+  Ajay,
+  Pushpaja,
+  Loubna,
+  Mathew,
+  Priyatharshini,
+
   E_COMMERCE,
-
-  Productmanagement,Shop,Timer,
+  Productmanagement,
+  Shop,
+  Timer,
 
 // Maarison Page Imported Image
   Book,

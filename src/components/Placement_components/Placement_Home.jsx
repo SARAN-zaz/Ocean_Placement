@@ -10,22 +10,19 @@ import TechnicalButton from "./TechnicalButton";
 import Placementstats from "./Placementstats";
 
 
-
-
-
 export default function Placement_Home() {
   return (
     <>
       <HeaderSection />
-      <AboutOcean/>
+      <AboutOcean />
       <AboutSection />
       <FeaturedCard1 />
       <FeaturedCard2 />
-      <TechnicalButton/>
+      <TechnicalButton />
       <Placementstats />
       <PlacedStudents />
-      <Methodology/>
-      <Footer/>
+      <Methodology />
+      <Footer />
     </>
   );
 }

@@ -6,7 +6,7 @@ export const featuredData = [
   },
   {
     id: 2,
-    img: "trainer",
+    img: "Trainer",
     title: "Expert Trainers",
   },
   {

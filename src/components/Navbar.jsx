@@ -9,8 +9,6 @@ export default function Navbar() {
         <li><Link to="/E_commerce">Project Modules</Link></li>
         <li><Link to="/tech">Interview Prep</Link></li>
         <li><Link to="/Developer">Developer Section</Link></li>
-
-
       </ul>
     </nav>
   )
