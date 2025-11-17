@@ -2,12 +2,34 @@ import { useState, useEffect } from "react";
 import images from "../../assets/Images";
 
 const DeveloperSection = () => {
-  const stats = [
-    { img: images.Book, label: "Questions", value: "500+", gradient: "from-[#0F2027] via-[#203A43] to-[#2C5364]" },
-    { img: images.students, label: "Students", value: "50K+", gradient: "from-[#8E2DE2] to-[#4A00E0]" },
-    { img: images.technology, label: "Technologies", value: "10+", gradient: "from-[#0F766E] to-[#0EA5E9]" },
-    { img: images.success, label: "Success Rate", value: "95%", gradient: "from-[#000000] to-[#FFB800]" },
-  ];
+const stats = [
+  { 
+    img: images.Book, 
+    label: "Questions", 
+    value: "500+", 
+    gradient: "from-[#3F2B96] to-[#A8C0FF]" // purple → soft blue
+  },
+  { 
+    img: images.students, 
+    label: "Students", 
+    value: "50K+", 
+    gradient: "from-[#1D976C] to-[#93F9B9]" // emerald → mint
+  },
+  { 
+    img: images.technology, 
+    label: "Technologies", 
+    value: "10+", 
+    gradient: "from-[#3A1C71] to-[#FFAF7B]" // violet → peach
+  },
+  { 
+    img: images.success, 
+    label: "Success Rate", 
+    value: "95%", 
+    gradient: "from-[#216EA0] to-[#20C6B6]" // teal → aqua
+  },
+];
+
+
 
   // ACTIVE INDEX STATE
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,7 +86,7 @@ const DeveloperSection = () => {
               className={`
                 flex flex-col justify-center items-start p-5 gap-3 rounded-2xl shadow-md aspect-[1.5/1]
                 bg-linear-to-r ${item.gradient} text-white transition-all duration-500
-                ${isActive ? "ring-[3px] ring-[#00A8FF]/70 scale-[1.05]" : "ring-0 scale-[1] opacity-90"}
+                ${isActive ? "ring-[1.5px] ring-[#00A8FF]/70 scale-[1.05]" : "ring-0 scale-[1] opacity-90"}
               `}
             >
               <div
