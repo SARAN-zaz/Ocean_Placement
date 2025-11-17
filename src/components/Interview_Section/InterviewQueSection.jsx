@@ -73,7 +73,7 @@ const InterviewQue = () => {
 
 return (
     <div className="my-15 max-w-[1200px] w-[90%] mx-auto">
-      <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-10">
+      <h1 className="text-4xl  bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899] bg-clip-text text-transparent text-[30px] font-semibold mb-10">
         HR Interview Questions & Answers
       </h1>
 

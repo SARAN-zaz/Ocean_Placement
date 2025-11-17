@@ -12,11 +12,11 @@ const DeveloperSection = () => {
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 py-12 max-w-[1200px] w-[90%] mx-auto">
 
       <div className="md:w-1/2 max-w-[600px]">
-        <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-4 w-full">
+        <h1 className=" text-[30px] font-semibold mb-4 w-full text-4xl  bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899] bg-clip-text text-transparent">
           Elevate Your Technical Skills
         </h1>
 
-        <p className="mb-6 text-[#5C5A5A] text-[16px] leading-8">
+        <p className="mb-6 text-[#5C5A5A] text-[16px] leading-8 ">
           Our comprehensive technical training programs combine hands-on
           projects, expert mentorship, and real-world scenarios to prepare you
           for success in the tech industry. From foundational programming to

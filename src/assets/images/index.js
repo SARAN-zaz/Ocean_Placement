@@ -78,19 +78,21 @@ import c from './c.svg';
 import cpp from './cpp.svg';
 import css from './css.svg';
 import analytics from './analytics.svg';
-// import django from './django.svg';
+import django from './django.svg';
 import flutter from './flutter.svg';
-// import html from './html.svg';
+import html from './html.svg';
 import java from './java.svg';
 import js from './js.svg';
 import mongodb from './mongodb.svg';
-// import mysql from './mysql.svg';
-// import node from './node.svg';
-// import python from './python.svg';
+import mysql from './mysql.svg';
+import node from './node.svg';
+import python from './python.svg';
 import react from './react.svg';
-// import testing from './testing.svg';
+import testing from './testing.svg';
 import spring from './spring.svg';
-// import uiux from './uiux.svg';
+import ux from './ux.png'
+import ideaimage from './ideaimage.png'
+import ideasproject from './ideasproject.png'
 
 
 
@@ -153,19 +155,21 @@ c,
 cpp,
 css,
 analytics,
-// django,
+django,
 flutter,
-// html,
+html,
 java,
 js,
 mongodb,
-// // mysql,
-// // node,
-// // python,
+mysql,
+node,
+python,
 react,
-// // testing,
+testing,
 spring,
-// // uiux,
+ux,
+ideaimage,
+ideasproject
 
 
 

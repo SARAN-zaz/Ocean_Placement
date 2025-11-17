@@ -18,7 +18,7 @@ const ProjectImageSection = () => {
     <section className="py-16">
       <div
         className="
-          max-w-[1200px] w-[90%] mx-auto p-8 rounded-2xl 
+          max-w-[1600px] w-[95%] mx-auto p-8 rounded-2xl 
           shadow-[0_10px_30px_rgba(0,0,0,0.15)]
           bg-white
         "

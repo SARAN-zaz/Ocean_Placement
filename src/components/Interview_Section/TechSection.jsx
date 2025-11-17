@@ -2,27 +2,26 @@ import { useState } from "react";
 import images from "../../assets/Images";
 
 const TechSection = () => {
-
   const techs = [
-    { name: "Angular", bg: "linear-gradient(to right, #e52d27, #b31217)", icon: images.angular },
-    { name: "Bootstrap", bg: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)", icon: images.bootstrap },
-    { name: "C", bg: "linear-gradient(to right, #654ea3, #eaafc8)", icon: images.c },
-    { name: "C++", bg: "linear-gradient(to right, #F7971E, #FFD200)", icon: images.cpp },
-    { name: "CSS", bg: "linear-gradient(to right, #4facfe, #00f2fe)", icon: images.css },
-    { name: "Data Analytics", bg: "linear-gradient(to right, #42275a, #734b6d)", icon: images.analytics },
-    { name: "Django", bg: "linear-gradient(to right, #0f9b0f, #000000)", icon: images.django },
-    { name: "Flutter", bg: "linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB)", icon: images.flutter },
-    { name: "HTML", bg: "linear-gradient(to right, #f12711, #f5af19)", icon: images.html },
-    { name: "Java", bg: "linear-gradient(to right, #FF512F, #DD2476)", icon: images.java },
-    { name: "JavaScript", bg: "linear-gradient(to right, #FFE259, #FFA751)", icon: images.js },
-    { name: "MongoDB", bg: "linear-gradient(to right, #0F2027, #203A43, #2C5364)", icon: images.mongodb },
-    { name: "MySQL", bg: "linear-gradient(to right, #2b5876, #4e4376)", icon: images.mysql },
-    { name: "Nodejs", bg: "linear-gradient(to right, #16A085, #F4D03F)", icon: images.node },
-    { name: "Python", bg: "linear-gradient(to right, #1CB5E0, #000851)", icon: images.python },
-    { name: "Reactjs", bg: "linear-gradient(to right, #396afc, #2948ff)", icon: images.react },
-    { name: "Software Testing", bg: "linear-gradient(to right, #8E2DE2, #4A00E0)", icon: images.testing },
-    { name: "SpringBoot", bg: "linear-gradient(to right, #11998e, #38ef7d)", icon: images.spring },
-    { name: "UI/UX", bg: "linear-gradient(to right, #FF0099, #493240)", icon: images.uiux },
+    { name: "Angular", bg: "linear-gradient(to right, #dd1b16, #c82312)", icon: images.angular },
+    { name: "Bootstrap", bg: "linear-gradient(to right, #563d7c, #7952b3)", icon: images.bootstrap },
+    { name: "C", bg: "linear-gradient(to right, #283593, #3949ab)", icon: images.c },
+    { name: "C++", bg: "linear-gradient(to right, #00599C, #3269ae)", icon: images.cpp },
+    { name: "CSS", bg: "linear-gradient(to right, #264de4, #2965f1)", icon: images.css },
+    { name: "Data Analytics", bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)", icon: images.analytics },
+    { name: "Django", bg: "linear-gradient(to right, #092E20, #0b3b2a)", icon: images.django },
+    { name: "Flutter", bg: "linear-gradient(to right, #02569B, #039BE5)", icon: images.flutter },
+    { name: "HTML", bg: "linear-gradient(to right, #E44D26, #F16529)", icon: images.html },
+    { name: "Java", bg: "linear-gradient(to right, #f44336, #e91e63)", icon: images.java },
+    { name: "JavaScript", bg: "linear-gradient(to right, #f7df1e, #fbbc04)", icon: images.js },
+    { name: "MongoDB", bg: "linear-gradient(to right, #13aa52, #116149)", icon: images.mongodb },
+    { name: "MySQL", bg: "linear-gradient(to right, #00758f, #0096c7)", icon: images.mysql },
+    { name: "Nodejs", bg: "linear-gradient(to right, #3c873a, #68a063)", icon: images.node },
+    { name: "Python", bg: "linear-gradient(to right, #ffd449, #4b8bbe)", icon: images.python },
+    { name: "Reactjs", bg: "linear-gradient(to right, #00d8ff, #61dafb)", icon: images.react },
+    { name: "Software Testing", bg: "linear-gradient(to right, #7b4397, #dc2430)", icon: images.testing },
+    { name: "SpringBoot", bg: "linear-gradient(to right, #6db33f, #3a7d2e)", icon: images.spring },
+    { name: "UI/UX", bg: "linear-gradient(to right, #ff0099, #493240)", icon: images.ux },
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,30 +54,28 @@ const TechSection = () => {
       </div>
 
       <div className="max-w-[1200px] w-[90%] mx-auto mt-10 overflow-x-auto pb-3">
-        <div className="flex gap-6 sm:gap-8 pb-8 pr-4" style={{ width: "max-content" }}>
+        <div className="flex gap-7 sm:gap-9 pb-8 pr-4" style={{ width: "max-content" }}>
           {filteredTechs.length > 0 ? (
             filteredTechs.map((item, i) => (
               <div
                 key={i}
                 className="
-                  group h-[138px] w-[216px] rounded-xl shrink-0 bg-white 
-                  flex flex-col justify-center items-start pl-7 
-                  transition-all duration-300 cursor-pointer
-                  shadow-[0px_4px_15px_rgba(0,0,0,0.15)]
+                  group h-[190px] w-70 rounded-xl shrink-0 bg-white shadow-[0px_6px_18px_rgba(0,0,0,0.18)]
+                  flex flex-col justify-center items-center gap-3
+                  transition-all duration-300 cursor-pointer hover:scale-[1.06]
                 "
               >
                 <div
                   className="
-                    w-[45px] h-[35px] rounded-md flex justify-center items-center 
-                    transition-all duration-300 
-                    group-hover:scale-125 group-hover:shadow-[0_0_10px_rgba(255,255,255,0.7)]
+                    w-[60px] h-[60px] rounded-lg flex justify-center items-center 
+                    transition-all duration-300 text-white font-semibold
+                    group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(255,255,255,0.9)]
                   "
                   style={{ background: item.bg }}
                 >
-                  <img src={item.icon} alt={item.name} className="w-6 h-6" />
+                  <img src={item.icon} alt={item.name} className="w-8 h-8" />
                 </div>
-
-                <p className="mt-2 text-sm font-semibold text-[#00AEFF]">{item.name}</p>
+                <p className="text-[15px] font-semibold text-[#00AEFF]">{item.name}</p>
               </div>
             ))
           ) : (
