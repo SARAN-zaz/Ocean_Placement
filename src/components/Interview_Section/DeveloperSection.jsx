@@ -1,18 +1,31 @@
+import { useState, useEffect } from "react";
 import images from "../../assets/Images";
 
 const DeveloperSection = () => {
   const stats = [
-    { img: images.Book, label: "Questions", value: "500+" },
-    { img: images.students, label: "Students", value: "50K+" },
-    { img: images.technology, label: "Technologies", value: "10+" },
-    { img: images.success, label: "Success Rate", value: "95%" },
+    { img: images.Book, label: "Questions", value: "500+", gradient: "from-[#0F2027] via-[#203A43] to-[#2C5364]" },
+    { img: images.students, label: "Students", value: "50K+", gradient: "from-[#8E2DE2] to-[#4A00E0]" },
+    { img: images.technology, label: "Technologies", value: "10+", gradient: "from-[#0F766E] to-[#0EA5E9]" },
+    { img: images.success, label: "Success Rate", value: "95%", gradient: "from-[#000000] to-[#FFB800]" },
   ];
+
+  // ACTIVE INDEX STATE
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // AUTO SWITCH LOGIC
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % stats.length);
+    }, 2000); // 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-10 py-12 max-w-[1200px] w-[90%] mx-auto">
 
       <div className="md:w-1/2 max-w-[600px]">
-        <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-4 w-full">
+        <h1 className="text-[30px] font-semibold mb-4 w-full text-4xl bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899] bg-clip-text text-transparent">
           Elevate Your Technical Skills
         </h1>
 
@@ -23,61 +36,56 @@ const DeveloperSection = () => {
           advanced frameworks, we’ve got you covered.
         </p>
 
-      <button
-  className="
-    bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899]
-    text-white font-semibold px-5 py-3 rounded-lg flex items-center gap-2 
-    shadow-md mt-13 transition-all duration-300 
-    hover:scale-[1.05] hover:shadow-[0_10px_25px_rgba(0,174,255,0.4)]
-    active:scale-[0.97] cursor-pointer
-  "
->
-  <img
-    src={images.developer}
-    alt=""
-    className="w-5 h-5 transition-transform duration-300 group-hover:scale-125 hover:rotate-6"
-  />
-  Project Innovation Hub
-</button>
-
+        <button
+          className="
+            bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899]
+            text-white font-semibold px-5 py-3 rounded-lg flex items-center gap-2 
+            shadow-md mt-13 transition-all duration-300 
+            hover:scale-[1.05] hover:shadow-[0_10px_25px_rgba(0,174,255,0.4)]
+            active:scale-[0.97] cursor-pointer
+          "
+        >
+          <img
+            src={images.developer}
+            alt=""
+            className="w-5 h-5 transition-transform duration-300 group-hover:scale-125 hover:rotate-6"
+          />
+          Project Innovation Hub
+        </button>
       </div>
 
+      <div className="grid grid-cols-2 gap-8 w-full md:w-1/2 max-w-[500px]">
+        {stats.map((item, index) => {
+          const isActive = index === activeIndex;
 
+          return (
+            <div
+              key={index}
+              className={`
+                flex flex-col justify-center items-start p-5 gap-3 rounded-2xl shadow-md aspect-[1.5/1]
+                bg-linear-to-r ${item.gradient} text-white transition-all duration-500
+                ${isActive ? "ring-[3px] ring-[#00A8FF]/70 scale-[1.05]" : "ring-0 scale-[1] opacity-90"}
+              `}
+            >
+              <div
+                className={`
+                  w-12 h-12 flex justify-center items-center rounded-xl bg-white transition-all duration-500 shadow-sm
+                  ${isActive ? "scale-110 brightness-110" : "scale-100"}
+                `}
+              >
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className={`w-[26px] h-[26px] transition-transform duration-500 ${isActive ? "scale-125" : ""}`}
+                />
+              </div>
 
-<div className="grid grid-cols-2 gap-8 w-full md:w-1/2 max-w-[500px]">
-  {stats.map((item, index) => (
-    <div
-      key={index}
-      className="
-        group bg-[#D9E8FF] flex flex-col justify-center items-start p-5 gap-3
-        rounded-2xl shadow-sm aspect-[1.5/1] transition-all duration-300
-        ring-0 ring-[#00A8FF]/0 hover:ring-[3px] hover:ring-[#00A8FF]/70
-      "
-    >
-      {/* Icon Wrapper */}
-      <div
-        className="
-          w-12 h-12 flex justify-center items-center rounded-xl bg-white
-          shadow-sm ring-0 ring-[#00A8FF]/0 transition-all duration-300 
-          group-hover:ring-2 group-hover:ring-[#00A8FF]/70 group-hover:scale-110
-        "
-      >
-        <img
-          src={item.img}
-          alt={item.label}
-          className="w-[26px] h-[26px] transition-transform duration-300 group-hover:scale-125"
-        />
+              <p className="text-sm tracking-wide">{item.label}</p>
+              <h1 className="text-2xl font-bold">{item.value}</h1>
+            </div>
+          );
+        })}
       </div>
-
-      <p className="text-gray-700 text-sm tracking-wide">{item.label}</p>
-      <h1 className="text-2xl font-bold text-[#000000]">{item.value}</h1>
-    </div>
-  ))}
-</div>
-
-
-
-
 
     </div>
   );

@@ -7,7 +7,7 @@ const ProjectIdeasSection = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2  md:text-left flex flex-col justify-center">
-          <h1 className="text-[#00AEFF] text-[30px] font-semibold mb-5">
+          <h1 className="text-4xl  bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899] bg-clip-text text-transparent text-[30px] font-semibold mb-5">
             Inspiring Project Ideas
           </h1>
           <p className="mb-6 text-[#5C5454] text-[16px]  md:leading-8">
@@ -23,7 +23,7 @@ const ProjectIdeasSection = () => {
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
             className="w-[90%] h-auto rounded-2xl object-cover"
-            src={images.projectIdea}
+            src={images.ideasproject}
             alt="Project Idea"
           />
         </div>
