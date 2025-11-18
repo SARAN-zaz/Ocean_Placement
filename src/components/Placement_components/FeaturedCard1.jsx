@@ -5,7 +5,7 @@ export default function FeaturedCard1() {
   const cardColors = ["#f3e8ff", "#d1fae5", "#dbeafe", "#ffedd5"];
 
   return (
-    <section className="relative min-h-fit bg-gradient-to-br from-blue-100 via-purple-50 to-pink-50 overflow-hidden">
+    <section className="relative min-h-fit bg-gradient-to-br from-blue-100 via-purple-50 to-pink-50 overflow-hidden ">
       {/* Mesh Gradient Circles */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply blur-3xl opacity-70 animate-pulse"></div>

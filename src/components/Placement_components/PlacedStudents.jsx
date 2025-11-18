@@ -140,7 +140,7 @@ export default function PlacedStudents() {
   const fifthRow = studentList.slice(24, 30);
 
   return (
-    <section className="bg-[#F0F8FF] py-10">
+    <section className="bg-[#F0F8FF] py-10 ">
       <div className="flex flex-col items-center justify-center gap-10 max-w-[1300px] mx-auto w-[80%]">
         <MovingRow data={firstRow} reverse={false} />
         <MovingRow data={secondRow} reverse={true} />
@@ -247,7 +247,7 @@ function MovingRow({ data, reverse }) {
 
 function StudentCard({ student }) {
   return (
-    <div className="student-card flex items-center gap-4 bg-white rounded-2xl shadow-md p-4 hover:scale-105 transition-transform duration-300">
+    <div className="student-card flex items-center gap-4 bg-white rounded-2xl shadow-md p-4 hover:scale-105 transition-transform duration-300 ">
       <img
         src={student.img}
         alt={student.name}

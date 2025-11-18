@@ -44,7 +44,7 @@ export default function Methodology() {
   }, [steps.length]);
 
   return (
-    <section className="mt-10 mb-10 w-[90%] max-w-[1200px] mx-auto">
+    <section className="mt-10 mb-10 w-[90%] max-w-[1200px] mx-auto    ">
       {/* Heading */}
       <div className="text-center">
         <p className="sm:text-xl font-semibold bg-linear-to-r from-[#0E90CF] via-[#0E90CF] to-[#217098] bg-clip-text text-transparent">
@@ -73,7 +73,7 @@ export default function Methodology() {
                     className={`
                       rounded-full w-28 h-28 flex items-center justify-center
                       transition-all duration-500
-                      ${isActive ? "scale-110 bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg" : "bg-[#E6F4FF]"}
+                      ${isActive ? "scale-110 bg-gradient-to-r from-indigo-500 to-cyan-600 shadow-lg" : "bg-[#E6F4FF]"}
                     `}
                   >
                     <img
@@ -88,7 +88,7 @@ export default function Methodology() {
                     className={`
                       absolute -top-5 -right-3 text-[14px] sm:text-[16px] font-semibold w-12 h-12 rounded-full flex items-center justify-center shadow-md
                       transition-all duration-500
-                      ${isActive ? "scale-110 bg-gradient-to-r from-fuchsia-300 to-blue-600 text-white" : "bg-[#00AEFF] text-white"}
+                      ${isActive ? "scale-110 bg-gradient-to-r from-cyan-300 to-blue-600 text-white" : "bg-[#00AEFF] text-white"}
                     `}
                     aria-hidden
                   >
