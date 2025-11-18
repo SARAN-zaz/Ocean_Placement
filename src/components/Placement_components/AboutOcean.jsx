@@ -13,7 +13,7 @@ export default function AboutOcean() {
             Empowering Futures with{" "}
             <span className="bg-linear-to-r from-[#0E90CF] via-[#0E90CF] to-[#217098] bg-clip-text text-transparent">Innovative Education</span>
           </h1>
-          <p className="text-[#5c5a5a] text-sm sm:text-base leading-relaxed mt-10  ml-0 lg:ml-10">
+          {/* <p className="text-[#5c5a5a] text-sm sm:text-base leading-relaxed mt-10  ml-0 lg:ml-10">
             As a Training and placement cell, We enhance student careers through
             various strategic initiatives aimed at improving employability and
             facilitating successful transitions into the professional world.
@@ -27,7 +27,22 @@ export default function AboutOcean() {
             and create opportunities for growth and success together!
             Encouraging lifelong learning is essential in today's rapidly
             evolving job market.
-          </p>
+          </p> */}
+          <p className="text-[#5c5a5a] text-sm sm:text-base leading-relaxed mt-10 ml-0 lg:ml-10 text-justify">
+  As a Training and Placement Cell, we enhance student careers through
+  various strategic initiatives aimed at improving employability and
+  facilitating successful transitions into the professional world.
+  Through guiding and supporting students in their journey from
+  academia to industry, we understand the importance of bridging the
+  gap between education and employment, and our mission is to
+  facilitate this transition seamlessly for our students. <br /><br />
+  You can expect from our Training & Placement Cell coding, communication
+  skills, problem-solving, leadership, teamwork, and industry-specific
+  knowledge. Get in touch with us to explore how we can collaborate
+  and create opportunities for growth and success together!
+  Encouraging lifelong learning is essential in today's rapidly
+  evolving job market.
+</p>
         </div>
 
         {/* Right Image Section */}
