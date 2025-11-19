@@ -1,0 +1,116 @@
+
+{
+  "ecommerce": {
+    "frontendModule": [
+      {
+        "id": 1,
+        "title": "User Authentication Module",
+        "icon": "Lock",
+        "color": "from-blue-500 to-cyan-500",
+        "description": "Handles user registration, login, and authentication, ensuring secure access to user accounts and personalized experiences.",
+        "features": [
+          "User Registration",
+          "Login / Logout",
+          "Password Recovery",
+          "Session Management"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Product Management Module",
+        "icon": "Package",
+        "color": "from-purple-500 to-pink-500",
+        "description": "Manages the entire product lifecycle from creation to inventory tracking for efficient control and smooth user experience.",
+        "features": [
+          "Product Creation & Editing",
+          "Category Management",
+          "Inventory Tracking",
+          "Price Management",
+          "Search & Filter Options",
+          "Product Reviews & Ratings"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Shopping Cart Module",
+        "icon": "ShoppingCart",
+        "color": "from-orange-500 to-red-500",
+        "description": "Provides administrative tools for managing users, permissions, and system",
+        "features": [
+          "User Role Management",
+          "System Configuration",
+          "Data Analytics Dashboard",
+          "Security Controls"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Order Tracking and History Module",
+        "icon": "Clock",
+        "color": "from-green-500 to-teal-500",
+        "description": "Allows users to view their order history, track order statuses, and receive notifications on order updates.",
+        "features": [
+          "Order History Overview",
+          "Real-Time Order Tracking",
+          "Instant Order Notifications",
+          "Downloadable Invoices",
+          "Advanced Search & Filters",
+          "One-Click Reorder Option"
+        ]
+      }
+    ],
+
+    "backendModule": [
+      {
+        "id": 1,
+        "title": "Database Management Module",
+        "icon": "Database",
+        "color": "from-indigo-500 to-blue-500",
+        "description": "Manages the database where user profiles, product information, order data, and transaction records are stored.",
+        "features": [
+          "Optimized Data Storage",
+          "Database Schema Design",
+          "Efficient Query Handling",
+          "Indexing and Performance Tuning",
+          "Backup and Recovery",
+          "Transaction Management (ACID)",
+          "Data Migration Support"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "API Layers",
+        "icon": "Layers",
+        "color": "from-cyan-500 to-teal-500",
+        "description": "Provides RESTful APIs for the frontend to interact with the backend, handling CRUD operations for products, user accounts, and orders",
+        "features": [
+          "RESTful API Endpoints",
+          "Request and Response Validation",
+          "Middleware Configuration",
+          "Secure API Authentication",
+          "CRUD Operations Support",
+          "API Versioning",
+          "Error Handling and Logging"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "User Authentication and Authorization Module",
+        "icon": "Lock",
+        "color": "from-violet-500 to-purple-500",
+        "description": "Validates user credentials, generates access tokens, and enforces role-based access control.",
+        "features": [
+          "User Registration",
+          "Login / Logout",
+          "Password Recovery",
+          "Session Management",
+          "Role-Based Access Control",
+          "Token-Based Authentication (JWT)",
+          "Email / Phone Verification"
+        ]
+      }
+    ]
+  }
+}
+
+
