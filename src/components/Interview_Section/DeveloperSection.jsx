@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import images from "../../assets/Images";
+import { useNavigate } from "react-router-dom";
 
 const DeveloperSection = () => {
+const navigate = useNavigate();
 const stats = [
   { 
     img: images.Book, 
@@ -59,6 +61,7 @@ const stats = [
         </p>
 
         <button
+           onClick={() => {window.scrollTo(0, 0); navigate("/Developer")}}
           className="
             bg-linear-to-r from-[#00AEFF] via-[#0070A4] to-[#006899]
             text-white font-semibold px-5 py-3 rounded-lg flex items-center gap-2 

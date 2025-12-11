@@ -1,7 +1,9 @@
 
+import { useNavigate } from "react-router-dom";
 
 
 export default function TechnicalButton() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-auto flex items-center justify-center p-4">
       <style>{`
@@ -104,6 +106,7 @@ export default function TechnicalButton() {
           backgroundSize: '30px 30px'
         }}></div>
         
+        
         <div className="relative z-10">
           <h1 className="text-3xl font-bold text-white mb-6">
             Technical Skill Development
@@ -113,7 +116,9 @@ export default function TechnicalButton() {
             Transforming classroom knowledge into career-ready expertise through guided, hands-on learning.
           </p>
           
-          <button className="bg-white text-[#0E90CF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center gap-2">
+          <button
+           onClick={() => {window.scrollTo(0, 0); navigate("/tech")}}
+         className="bg-white text-[#0E90CF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center gap-2">
             Technical Training
             <svg 
               className="w-5 h-5" 

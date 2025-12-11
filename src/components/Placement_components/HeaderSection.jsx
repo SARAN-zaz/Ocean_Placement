@@ -2,9 +2,9 @@ export default function HeaderSection() {
   return (
     <section className="relative bg-linear-to-r from-[#034E72] to-[#00AEFF] text-center py-16 px-4 text-white overflow-hidden">
       {/* Floating Shapes */}
-      <div className="absolute w-16 h-16 bg-[#00AEFF] opacity-20 rounded-full animate-moveY-fast top-3/4 left-60"></div>
+      <div className="absolute w-16 h-16 bg-white opacity-20 rounded-full animate-moveY-fast top-3/4 left-60"></div>
       <div className="absolute w-16 h-16 bg-white opacity-20 rounded-full animate-moveY-medium top-10 right-60"></div>
-      <div className="absolute w-10 h-10 bg-white opacity-20 rounded-full animate-moveY-slow top-10 left-10"></div>
+      <div className="absolute w-10 h-10 bg-green-400 opacity-20 rounded-full animate-moveY-slow top-10 left-10"></div>
       <div className="absolute w-12 h-12 bg-yellow-400 opacity-50 rounded-full animate-moveY-extraFast top-20 right-20"></div>
       <div className="absolute w-10 h-10 bg-yellow-400 opacity-25 rotate-10 animate-moveY-fast top-1/2 left-1/4"></div>
       <div className="absolute w-14 h-14 bg-green-400 opacity-20 rotate-12 animate-moveY-medium top-3/4 right-1/3"></div>

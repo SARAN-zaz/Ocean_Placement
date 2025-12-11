@@ -69,23 +69,23 @@ import technology from "./technology.svg";
 import developer from "./developer.svg";
 import tag from "./tag.svg";
 import search from "./search.svg";
-import projectIdea from "./projectIdea.svg";
+// import projectIdea from "./projectIdea.svg";
 import shedule from './shedule.svg'
 import Project2 from './Project2.svg'
 import Project3 from './Project3.svg'
 import Project4 from './Project4.svg'
 import Project5 from './Project5.svg'
 import Project6 from './Project6.svg'
-import ProjectOne from './ProjectOne.jpg'
-import ProjectTwo from './ProjectTwo.jpg'
-import ProjectThree from './ProjectThree.jpg'
-import ProjectFour from './ProjectFour.jpg'
-import ProjectFive from './ProjectFive.jpg'
-import ProjectSix from './ProjectSix.jpg'
-import ProjectSeven from './ProjectSeven.jpg'
-import ProjectEight from './ProjectEight.jpg'
-import ProjectNine from './ProjectNine.jpg'
-import ProjectTen from './ProjectTen.jpg'
+// import ProjectOne from './ProjectOne.jpg'
+// import ProjectTwo from './ProjectTwo.jpg'
+// import ProjectThree from './ProjectThree.jpg'
+// import ProjectFour from './ProjectFour.jpg'
+// import ProjectFive from './ProjectFive.jpg'
+// import ProjectSix from './ProjectSix.jpg'
+// import ProjectSeven from './ProjectSeven.jpg'
+// import ProjectEight from './ProjectEight.jpg'
+// import ProjectNine from './ProjectNine.jpg'
+// import ProjectTen from './ProjectTen.jpg'
 import angular from './angular.svg';
 import bootstrap from './bootstrap.svg';
 import c from './c.svg';
@@ -166,23 +166,23 @@ const  images = {
   developer,
   tag,
   search,
-  projectIdea,
+  // projectIdea,
   shedule,
   Project2,
   Project4,
   Project5,
   Project6,
   Project3,
-  ProjectOne,
-  ProjectTwo,
-  ProjectThree,
-  ProjectFour,
-  ProjectFive,
-  ProjectSix,
-  ProjectSeven,
-  ProjectEight,
-  ProjectNine,
-  ProjectTen,
+  // ProjectOne,
+  // ProjectTwo,
+  // ProjectThree,
+  // ProjectFour,
+  // ProjectFive,
+  // ProjectSix,
+  // ProjectSeven,
+  // ProjectEight,
+  // ProjectNine,
+  // ProjectTen,
  angular,
 bootstrap,
 c,
