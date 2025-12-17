@@ -1,9 +1,35 @@
-/* You can add global styles to this file, and also import other style files
+You can add global styles to this file, and also import other style files
+/* *{
+  margin : 0px;
+  padding: 0px;
+} */
 
 .main-container-interview-questions {
   max-width: 1200px;
   width: 75%;
   margin: auto;
+}
+
+.h1{
+  color:#2097f3 !important;
+}
+
+.code-block {
+  background-color:#E3E3E3;
+  color: #100F0F;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: monospace;
+  white-space: pre; /* preserves line breaks and spacing */
+  /* font-size: 14px; */
+}
+
+
+
+.main-container-interview-questions  {
+  color: #797979;
+  line-height: 25px;
+  margin: 15px 0 10px 0;
 }
 
 pre {
@@ -16,21 +42,29 @@ pre {
   overflow-y: hidden;
   white-space: now;
   width: 600px;
+  font-size: 14px;
 }
 
 h4 {
   color: #2097f3;
+  font-weight: 500;
+  font-size: 24px;
 }
 
-p {
+ /* p { */
+  /* color: #797979; */
+  /* line-height: 25px; */
+  /* margin:15px 0 10px 0 */
+/* }  */
+
+/* li {
   color: #797979;
-  line-height: 25px;
-}
+} */
 
-li {
-  color: #797979;
+ul {
+   margin-top: 10px;
+  margin-bottom: 30px;
 }
-
 h6 {
   color: #2097f3;
 }
@@ -44,12 +78,17 @@ h6 {
   margin-bottom: 12px;
 }
 
+.main-heading-interview-questions-answers p{
+   margin-bottom: 16px; 
+}
+
 .main-heading-q-a {
   text-align: center;
-  color: #2097f3;
+  /* color: #2097f3; */
   font-size: 24px;
   font-weight: bold;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .img-class-language-logo {
@@ -94,4 +133,4 @@ h6 {
   pre {
     width: 300px;
   }
-} */
+}

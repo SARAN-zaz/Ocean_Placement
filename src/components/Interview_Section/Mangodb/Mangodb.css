@@ -1,0 +1,24 @@
+.main-container-interview-questions{
+    padding: 20px;
+    width: 80%;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  @media (max-width: 800px) {
+
+    .main-container-interview-questions{
+      padding: 20px;
+    width: 97%;
+    max-width: 1400px;
+    margin-inline: auto;
+    }
+  }
+  @media (max-width: 480px) {
+
+    .main-container-interview-questions{
+      padding: 10px;
+    width:100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    }
+  }

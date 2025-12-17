@@ -1,0 +1,152 @@
+
+  .main-container-interview-questions{
+    padding: 20px;
+    width: 80%;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  .question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+
+pre {
+  padding: 15px;
+  background-color: #0000001c;
+  color: #100f0f;
+  display: inline-block;
+  border-radius: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: now;
+  width: 500px;
+  margin-bottom: 15px;
+}
+h4 {
+  color: #2097f3;
+}
+
+/* p {
+  color: #797979;
+} */
+
+li {
+  color: #797979;
+  list-style-type: disc;
+  
+}
+
+ul{
+  padding-left: 32px;
+}
+
+h6 {
+  color: #2097f3;
+}
+.main-heading-interview-questions-answers {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  margin-top: 24px;
+}
+.main-heading-q-a {
+  text-align: center;
+  color: #2097f3;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.img-class-language-logo {
+  height: 300px;
+  width: 300px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.two-images-para {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+@media (max-width: 900px) {
+  .main-heading-interview-questions-answers {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 800px) {
+  .main-container-interview-questions {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  pre {
+    width: 450px;
+  }
+  .img-cls {
+    width: 455px;
+  }
+}
+@media (max-width: 500px) {
+  pre {
+    width: 350px;
+  }
+  .img-cls {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .img-cls {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .img-cls {
+    width: 300px;
+  }
+  pre {
+    width: 300px;
+  }
+}
+@media (max-width: 350px) {
+  .img-class-language-logo {
+    height: 265px;
+    width: 240px;
+  }
+  pre {
+    width: 270px;
+  }
+}
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 20px;
+  width: 97%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}
+@media (max-width:480px) {
+
+  .main-container-interview-questions{
+    padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}

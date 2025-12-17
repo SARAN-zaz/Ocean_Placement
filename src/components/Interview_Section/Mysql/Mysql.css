@@ -1,0 +1,75 @@
+.main-container-interview-questions{
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+@media (max-width: 750px) {
+  .img-cls {
+    width: 600px;
+  }
+}
+@media (max-width: 650px) {
+  .img-cls {
+    width: 550px;
+  }
+}
+@media (max-width: 600px) {
+  .img-cls {
+    width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .img-cls {
+    width: 450px;
+  }
+}
+@media (max-width: 490px) {
+  .img-class-language-logo{
+    margin-top:-80px;
+    margin-bottom: -50px;
+  }
+  .img-cls {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .main-container-interview-questions{
+    padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+  .img-cls {
+    width: 346px;
+    height: 240px;
+    object-fit: none;
+  }
+}
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 10px;
+    width: 97%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}

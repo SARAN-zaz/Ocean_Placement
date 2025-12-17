@@ -1,73 +1,161 @@
 import { useState } from "react";
 import images from "../../assets/Images";
+import { useNavigate } from "react-router-dom";
+
 
 const TechSection = () => {
-
   const techs = [
-  { name: "Java", bg: "linear-gradient(to right, #f44336, #e91e63)", icon: images.java },
-  { name: "Python", bg: "linear-gradient(to right, #ffd449, #4b8bbe)", icon: images.python },
-  { name: "C", bg: "linear-gradient(to right, #283593, #3949ab)", icon: images.c },
-  { name: "C++", bg: "linear-gradient(to right, #00599C, #3269ae)", icon: images.cpp },
-  { name: "JavaScript", bg: "linear-gradient(to right, #f7df1e, #fbbc04)", icon: images.js },
-  { name: "Nodejs", bg: "linear-gradient(to right, #3c873a, #68a063)", icon: images.node },
-  { name: "Mysql", bg: "linear-gradient(to right, #00758f, #0096c7)", icon: images.mysql },
+    {
+      name: "Java",
+      bg: "linear-gradient(to right, #f44336, #e91e63)",
+      icon: images.java,
+      route: "/java-interview-questions-answers" 
+    },
+    {
+      name: "Python",
+      bg: "linear-gradient(to right, #ffd449, #4b8bbe)",
+      icon: images.python,
+      route: "/Python-interview-questions-answers" 
+    },
+    {
+      name: "C",
+      bg: "linear-gradient(to right, #283593, #3949ab)",
+      icon: images.c,
+      route: "/Cprogramm-interview-questions-answers" 
+    },
+    {
+      name: "C++",
+      bg: "linear-gradient(to right, #00599C, #3269ae)",
+      icon: images.cpp,
+      route: "/Cplus-interview-questions-answers"
+    },
+    {
+      name: "JavaScript",
+      bg: "linear-gradient(to right, #f7df1e, #fbbc04)",
+      icon: images.js,
+      route: "/Javascript-interview-questions-answers"
+    },
+    {
+      name: "Nodejs",
+      bg: "linear-gradient(to right, #3c873a, #68a063)",
+      icon: images.node,
+      route:"/Nodejs-interview-questions-answers"
+    },
+    {
+      name: "Mysql",
+      bg: "linear-gradient(to right, #00758f, #0096c7)",
+      icon: images.mysql,
+      route: "/Mysql-interview-questions-answers"
+    },
 
-  { name: "Mongo db", bg: "linear-gradient(to right, #13aa52, #116149)", icon: images.mongodb },
-  { name: "React js", bg: "linear-gradient(to right, #00d8ff, #61dafb)", icon: images.react },
-  { name: "Angular", bg: "linear-gradient(to right, #dd1b16, #c82312)", icon: images.angular },
-  { name: "Flutter", bg: "linear-gradient(to right, #02569B, #039BE5)", icon: images.flutter },
-  { name: "UI/UX", bg: "linear-gradient(to right, #ff0099, #493240)", icon: images.ux },
-  { name: "Django", bg: "linear-gradient(to right, #092E20, #0b3b2a)", icon: images.django },
-  { name: "HTML", bg: "linear-gradient(to right, #E44D26, #F16529)", icon: images.html },
+    {
+      name: "Mongo db",
+      bg: "linear-gradient(to right, #13aa52, #116149)",
+      icon: images.mongodb,
+      route: "/Mangodb-interview-questions-answers"
+    },
+    {
+      name: "React js",
+      bg: "linear-gradient(to right, #00d8ff, #61dafb)",
+      icon: images.react,
+    },
+    {
+      name: "Angular",
+      bg: "linear-gradient(to right, #dd1b16, #c82312)",
+      icon: images.angular,
+      route: "/Angular-interview-questions-answers" 
+    },
+    {
+      name: "Flutter",
+      bg: "linear-gradient(to right, #02569B, #039BE5)",
+      icon: images.flutter,
+    },
+    {
+      name: "UI/UX",
+      bg: "linear-gradient(to right, #ff0099, #493240)",
+      icon: images.ux,
+    },
+    {
+      name: "Django",
+      bg: "linear-gradient(to right, #092E20, #0b3b2a)",
+      icon: images.django,
+    },
+    {
+      name: "HTML",
+      bg: "linear-gradient(to right, #E44D26, #F16529)",
+      icon: images.html,
+    },
 
-  { name: "CSS", bg: "linear-gradient(to right, #264de4, #2965f1)", icon: images.css },
-  { name: "Software Testing", bg: "linear-gradient(to right, #7b4397, #dc2430)", icon: images.testing },
-  { name: "Bootstrap", bg: "linear-gradient(to right, #563d7c, #7952b3)", icon: images.bootstrap },
-  { name: "SpringBoot", bg: "linear-gradient(to right, #6db33f, #3a7d2e)", icon: images.spring },
-  { name: "Data Analytics", bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)", icon: images.analytics },
-];
+    {
+      name: "CSS",
+      bg: "linear-gradient(to right, #264de4, #2965f1)",
+      icon: images.css,
+    },
+    {
+      name: "Software Testing",
+      bg: "linear-gradient(to right, #7b4397, #dc2430)",
+      icon: images.testing,
+    },
+    {
+      name: "Bootstrap",
+      bg: "linear-gradient(to right, #563d7c, #7952b3)",
+      icon: images.bootstrap,
+    },
+    {
+      name: "SpringBoot",
+      bg: "linear-gradient(to right, #6db33f, #3a7d2e)",
+      icon: images.spring,
+    },
+    {
+      name: "Data Analytics",
+      bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
+      icon: images.analytics,
+    },
+  ];
 
-// const techs = [
-//   // ---------- FRONTEND ----------
-//   { name: "HTML", bg: "linear-gradient(to right, #E44D26, #F16529)", icon: images.html },
-//   { name: "CSS", bg: "linear-gradient(to right, #264de4, #2965f1)", icon: images.css },
-//   { name: "Bootstrap", bg: "linear-gradient(to right, #563d7c, #7952b3)", icon: images.bootstrap },
-//   { name: "JavaScript", bg: "linear-gradient(to right, #f7df1e, #fbbc04)", icon: images.js },
-//   { name: "Angular", bg: "linear-gradient(to right, #dd1b16, #c82312)", icon: images.angular },
-//   { name: "Reactjs", bg: "linear-gradient(to right, #00d8ff, #61dafb)", icon: images.react },
+  // const techs = [
+  //   // ---------- FRONTEND ----------
+  //   { name: "HTML", bg: "linear-gradient(to right, #E44D26, #F16529)", icon: images.html },
+  //   { name: "CSS", bg: "linear-gradient(to right, #264de4, #2965f1)", icon: images.css },
+  //   { name: "Bootstrap", bg: "linear-gradient(to right, #563d7c, #7952b3)", icon: images.bootstrap },
+  //   { name: "JavaScript", bg: "linear-gradient(to right, #f7df1e, #fbbc04)", icon: images.js },
+  //   { name: "Angular", bg: "linear-gradient(to right, #dd1b16, #c82312)", icon: images.angular },
+  //   { name: "Reactjs", bg: "linear-gradient(to right, #00d8ff, #61dafb)", icon: images.react },
 
-//   // ---------- BACKEND ----------
-//   { name: "C", bg: "linear-gradient(to right, #283593, #3949ab)", icon: images.c },
-//   { name: "C++", bg: "linear-gradient(to right, #00599C, #3269ae)", icon: images.cpp },
-//   { name: "Java", bg: "linear-gradient(to right, #f44336, #e91e63)", icon: images.java },
-//   { name: "Python", bg: "linear-gradient(to right, #ffd449, #4b8bbe)", icon: images.python },
-//   { name: "Nodejs", bg: "linear-gradient(to right, #3c873a, #68a063)", icon: images.node },
-//   { name: "SpringBoot", bg: "linear-gradient(to right, #6db33f, #3a7d2e)", icon: images.spring },
-//   { name: "Django", bg: "linear-gradient(to right, #092E20, #0b3b2a)", icon: images.django },
+  //   // ---------- BACKEND ----------
+  //   { name: "C", bg: "linear-gradient(to right, #283593, #3949ab)", icon: images.c },
+  //   { name: "C++", bg: "linear-gradient(to right, #00599C, #3269ae)", icon: images.cpp },
+  //   { name: "Java", bg: "linear-gradient(to right, #f44336, #e91e63)", icon: images.java },
+  //   { name: "Python", bg: "linear-gradient(to right, #ffd449, #4b8bbe)", icon: images.python },
+  //   { name: "Nodejs", bg: "linear-gradient(to right, #3c873a, #68a063)", icon: images.node },
+  //   { name: "SpringBoot", bg: "linear-gradient(to right, #6db33f, #3a7d2e)", icon: images.spring },
+  //   { name: "Django", bg: "linear-gradient(to right, #092E20, #0b3b2a)", icon: images.django },
 
-//   // ---------- DATABASE ----------
-//   { name: "MySQL", bg: "linear-gradient(to right, #00758f, #0096c7)", icon: images.mysql },
-//   { name: "MongoDB", bg: "linear-gradient(to right, #13aa52, #116149)", icon: images.mongodb },
+  //   // ---------- DATABASE ----------
+  //   { name: "MySQL", bg: "linear-gradient(to right, #00758f, #0096c7)", icon: images.mysql },
+  //   { name: "MongoDB", bg: "linear-gradient(to right, #13aa52, #116149)", icon: images.mongodb },
 
-//   // ---------- MOBILE / CROSS-PLATFORM ----------
-//   { name: "Flutter", bg: "linear-gradient(to right, #02569B, #039BE5)", icon: images.flutter },
+  //   // ---------- MOBILE / CROSS-PLATFORM ----------
+  //   { name: "Flutter", bg: "linear-gradient(to right, #02569B, #039BE5)", icon: images.flutter },
 
-//   // ---------- DATA & ANALYTICS ----------
-//   { name: "Data Analytics", bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)", icon: images.analytics },
+  //   // ---------- DATA & ANALYTICS ----------
+  //   { name: "Data Analytics", bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)", icon: images.analytics },
 
-//   // ---------- TESTING ----------
-//   { name: "Software Testing", bg: "linear-gradient(to right, #7b4397, #dc2430)", icon: images.testing },
+  //   // ---------- TESTING ----------
+  //   { name: "Software Testing", bg: "linear-gradient(to right, #7b4397, #dc2430)", icon: images.testing },
 
-//   // ---------- UI / UX ----------
-//   { name: "UI/UX", bg: "linear-gradient(to right, #ff0099, #493240)", icon: images.ux },
-// ];
-
+  //   // ---------- UI / UX ----------
+  //   { name: "UI/UX", bg: "linear-gradient(to right, #ff0099, #493240)", icon: images.ux },
+  // ];
 
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredTechs = techs.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const navigate = useNavigate();
+
 
   return (
     <>
@@ -93,11 +181,15 @@ const TechSection = () => {
       </div>
 
       <div className="max-w-[1200px] w-[90%] mx-auto mt-10 overflow-x-auto pb-3">
-        <div className="flex gap-7 sm:gap-9 pb-8 pr-4" style={{ width: "max-content" }}>
+        <div
+          className="flex gap-7 sm:gap-9 pb-8 pr-4"
+          style={{ width: "max-content" }}
+        >
           {filteredTechs.length > 0 ? (
             filteredTechs.map((item, i) => (
               <div
                 key={i}
+                onClick={() => item.route && navigate(item.route)}
                 className="
                   group h-[190px] w-70 rounded-xl shrink-0 bg-white shadow-[0px_6px_18px_rgba(0,0,0,0.18)]
                   flex flex-col justify-center items-center gap-3
@@ -114,7 +206,9 @@ const TechSection = () => {
                 >
                   <img src={item.icon} alt={item.name} className="w-8 h-8" />
                 </div>
-                <p className="text-[15px] font-semibold text-[#00AEFF]">{item.name}</p>
+                <p className="text-[15px] font-semibold text-[#00AEFF]">
+                  {item.name}
+                </p>
               </div>
             ))
           ) : (

@@ -1,0 +1,99 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.main-container-interview-questions{
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.img-class-language-logo{
+  width: 230px;
+  height: 230px;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+@media (max-width: 1200px) {
+
+  
+  .img{
+    object-fit: contain;
+    width:100%;
+    
+  }
+  .promise{
+    object-fit: contain;
+    width:100%;
+    
+  }
+  td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 0px;
+}
+}
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 10px;
+    width:100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+  .img{
+    object-fit: contain;
+    width:100%;
+    
+  }
+  .promise{
+    object-fit: contain;
+    width:100%;
+    
+  }
+}
+@media (max-width: 480px) {
+
+  .main-container-interview-questions{
+    padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}
+@media (max-width: 500px) {
+  pre {
+      width: 260px;
+  }
+  td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 0px;
+}
+  .img{
+    object-fit: contain;
+    width:100%;
+    
+  }
+  .promise{
+    object-fit: contain;
+    width:100%;
+    
+  }
+  .imgg{
+    width: 338px;
+    height:100px;
+  }
+  
+}

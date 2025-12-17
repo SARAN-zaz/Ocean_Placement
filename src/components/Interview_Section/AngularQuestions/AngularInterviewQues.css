@@ -1,0 +1,28 @@
+.main-container-interview-questions{
+    padding: 20px;
+    width: 80%;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  .img-class-language-logo{
+    width: 210px;
+    height: 210px;
+  }
+  @media (max-width: 800px) {
+    .img-cls {
+      width: 400px;
+      
+    }
+    pre {
+      width: 350px;
+  }
+  .precode {
+    width: 294px;
+}
+    .main-container-interview-questions{
+      padding: 10px;
+    width:100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    }
+  }
