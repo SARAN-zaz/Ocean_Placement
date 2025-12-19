@@ -15,6 +15,16 @@ import { Nodejs } from "./components/Interview_Section/Nodejs/Nodejs";
 import { JavascriptInterviewQues } from "./components/Interview_Section/Javascript/JavascriptInterviewQues";
 import { Mysql } from "./components/Interview_Section/Mysql/Mysql";
 import { Mangodb } from "./components/Interview_Section/Mangodb/Mangodb";
+import { React } from "./components/Interview_Section/React/React";
+import { Flutter } from "./components/Interview_Section/Flutter/Flutter";
+import { UIUX } from "./components/Interview_Section/UIUX/UIUX";
+import { Django } from "./components/Interview_Section/Django/Django";
+import { HTML } from "./components/Interview_Section/HTML/html";
+import { CSS } from "./components/Interview_Section/CSS/CSS";
+import { SoftwareTesting } from "./components/Interview_Section/Software Testing/SoftwareTesting";
+import { Bootstrap } from "./components/Interview_Section/Bootstrap/Bootstrap";
+import { Springboot } from "./components/Interview_Section/Springboot/Springboot";
+import { DataAnalytics } from "./components/Interview_Section/DataAnalytics/DataAnalytics";
 
 function App() {
   return (
@@ -36,6 +46,16 @@ function App() {
         <Route path="/Javascript-interview-questions-answers" element={<JavascriptInterviewQues/>} />
         <Route path="/Mysql-interview-questions-answers" element={<Mysql/>} />
         <Route path="/Mangodb-interview-questions-answers" element={<Mangodb/>} />
+        <Route path="/React-interview-questions-answers" element={<React/>} />
+        <Route path="/Flutter-interview-questions-answers" element={<Flutter/>} />
+        <Route path="/UIUX-interview-questions-answers" element={<UIUX/>} />
+        <Route path="/Django-interview-questions-answers" element={<Django/>} />
+        <Route path="/HTML-interview-questions-answers" element={<HTML/>} />
+        <Route path="/CSS-interview-questions-answers" element={<CSS/>} />
+        <Route path="/SoftwareTesting-interview-questions-answers" element={<SoftwareTesting/>} />
+        <Route path="/Bootstrap-interview-questions-answers" element={<Bootstrap/>} />
+        <Route path="/Springboot-interview-questions-answers" element={<Springboot/>} />
+        <Route path="/DataAnalytics-interview-questions-answers" element={<DataAnalytics/>} />
       </Routes>
     </>
   );

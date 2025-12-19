@@ -1,0 +1,35 @@
+.main-container-interview-questions{
+    padding: 20px;
+    width: 80%;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  .question-answer h4 {
+  margin-bottom: 8px;
+}
+.question-answer p {
+  margin-bottom: 16px;
+}
+
+  @media (max-width: 800px) {
+
+    .main-container-interview-questions{
+      padding: 10px;
+    width:100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    }
+  }
+  @media (max-width: 500px) {
+    pre {
+        width: 324px;
+    }
+    .lang-css{
+      width: 300px;
+    }
+    img{
+width:100%;
+object-fit: contain;
+    }
+  }

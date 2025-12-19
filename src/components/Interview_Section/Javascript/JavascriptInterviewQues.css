@@ -9,6 +9,14 @@ table {
   max-width: 1400px;
   margin-inline: auto;
 }
+
+ .question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+  
 .img-class-language-logo{
   width: 230px;
   height: 230px;

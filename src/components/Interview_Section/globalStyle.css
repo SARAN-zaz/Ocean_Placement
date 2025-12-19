@@ -1,9 +1,4 @@
 You can add global styles to this file, and also import other style files
-/* *{
-  margin : 0px;
-  padding: 0px;
-} */
-
 .main-container-interview-questions {
   max-width: 1200px;
   width: 75%;
@@ -21,7 +16,7 @@ You can add global styles to this file, and also import other style files
   border-radius: 8px;
   font-family: monospace;
   white-space: pre; /* preserves line breaks and spacing */
-  /* font-size: 14px; */
+  font-size: 14px;
 }
 
 
@@ -40,7 +35,7 @@ pre {
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: now;
+  white-space:normal;
   width: 600px;
   font-size: 14px;
 }
@@ -62,9 +57,18 @@ h4 {
 } */
 
 ul {
-   margin-top: 10px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
+
+ol {
+  list-style-type: decimal;
+  padding-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+
 h6 {
   color: #2097f3;
 }

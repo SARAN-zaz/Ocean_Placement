@@ -33,7 +33,7 @@ export const Nodejs = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="question-answer">
         <h4 id="1-what-is-node-js-">1. What is Node.js?</h4>
         <p>
           Node.js is an open-source, server-side runtime environment built on
@@ -155,7 +155,7 @@ export const Nodejs = () => {
         <h4 id="5-how-can-you-create-a-simple-http-server-in-node-js-">
           5. How can you create a simple HTTP server in Node.js?
         </h4>
-        <pre>
+        {/* <pre>
           <code>
             const http = <span className="hljs-built_in">require</span>(
             <span className="hljs-string">'http'</span>); const server =
@@ -178,7 +178,23 @@ export const Nodejs = () => {
             </span>
             ); &#125;);
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+    {`const http = require('http');
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/plain'
+  });
+  res.end('Hello, World!');
+});
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});`}
+  </code>
+</pre>
+
         {/* <!-- 6 --> */}
         <h4 id="6-what-is-express-js-">6. What is Express.js?</h4>
         <p>
@@ -439,7 +455,7 @@ export const Nodejs = () => {
             </p>
           </li>
         </ul>
-        <pre>
+        {/* <pre>
           <code>
             const EventEmitter = <span className="hljs-built_in">require</span>(
             <span className="hljs-string">'events'</span>); const myEmitter ={" "}
@@ -453,6 +469,19 @@ export const Nodejs = () => {
             <span className="hljs-built_in">console</span>.log(
             <span className="hljs-string">'Hello, world!'</span>); &#125;);
             myEmitter.emit(<span className="hljs-string">'greet'</span>);
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+            
+myEmitter.on('greet', () => {
+  console.log('Hello, world!');
+});
+            
+myEmitter.emit('greet');`}
           </code>
         </pre>
 
@@ -595,7 +624,7 @@ export const Nodejs = () => {
           often occurs when dealing with asynchronous operations in JavaScript,
           such as making multiple nested asynchronous calls within each other.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             asyncOperation1(<span className="hljs-name">function</span>(
             <span className="hljs-name">response1</span>) &#123; asyncOperation2(
@@ -607,6 +636,19 @@ export const Nodejs = () => {
             <span className="hljs-comment">;</span>
             &#125;)<span className="hljs-comment">;</span>
             &#125;)<span className="hljs-comment">;</span>
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+            
+myEmitter.on('greet', () => {
+  console.log('Hello, world!');
+});
+            
+myEmitter.emit('greet');`}
           </code>
         </pre>
 
@@ -633,7 +675,7 @@ export const Nodejs = () => {
           after a set period, which can be helpful in scenarios like animations,
           event handling, or simulating asynchronous behavior.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             setTimeout(
             <span className="hljs-function">
@@ -646,6 +688,14 @@ export const Nodejs = () => {
               'This message will be printed after 2000 milliseconds.'
             </span>
             ); &#125;, <span className="hljs-number">2000</span>);
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`setTimeout(function() {
+    console.log('This message will be printed after 2000 milliseconds.');
+ }, 2000);`}
           </code>
         </pre>
 
@@ -742,7 +792,7 @@ export const Nodejs = () => {
               throw an error inside a try-catch block to handle synchronous
               errors.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-keyword">try</span> &#123;
                 <span className="hljs-comment">
@@ -753,6 +803,15 @@ export const Nodejs = () => {
                 <span className="hljs-comment">// Handle the error</span>
                 &#125;
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`try {
+  // Code that may throw an error
+ } catch (error) {
+  // Handle the error
+}`}
+              </code>
             </pre>
           </li>
           <li>
@@ -762,7 +821,7 @@ export const Nodejs = () => {
               of passing an error object as the first argument to the callback
               function if an error occurs.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 fs.readFile(<span className="hljs-string">'file.txt'</span>,{" "}
                 <span className="hljs-function">
@@ -776,6 +835,18 @@ export const Nodejs = () => {
                 <span className="hljs-comment">// Process the data</span>
                 &#125; &#125;);
               </code>
+            </pre> */}
+
+            <pre>
+              <code>
+                {`fs.readFile('file.txt', function(error, data) {
+    if (error) {
+        // Handle the error
+    } else {
+        // Process the data
+    }
+});`}
+              </code>
             </pre>
           </li>
           <li>
@@ -784,7 +855,7 @@ export const Nodejs = () => {
               operations that return promises, use .then() and .catch() to
               handle success and error conditions.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-selector-tag">someAsyncFunction</span>()
                 <span className="hljs-selector-class">.then</span>(result =&gt;
@@ -796,6 +867,18 @@ export const Nodejs = () => {
                 <span className="hljs-comment">// Handle error</span>
                 &#125;);
               </code>
+            </pre> */}
+
+            <pre>
+              <code>
+                {`someAsyncFunction()
+    .then(result => {
+        // Handle success
+    })
+    .catch(error => {
+        // Handle error
+    });`}
+              </code>
             </pre>
           </li>
           <li>
@@ -804,7 +887,7 @@ export const Nodejs = () => {
               you can write asynchronous code in a synchronous-like manner,
               making error handling more straightforward.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-keyword">async</span>{" "}
                 <span className="hljs-function">
@@ -821,6 +904,19 @@ export const Nodejs = () => {
                 <span className="hljs-comment">// Handle error</span>
                 &#125; &#125;{" "}
               </code>
+            </pre> */}
+
+            <pre>
+              <code>
+                {`async function fetchData() {
+     try {
+        const data = await fetchDataAsync();
+        // Handle success
+      } catch (error) {
+        // Handle error
+      }
+  } `}
+              </code>
             </pre>
           </li>
           <li>
@@ -830,7 +926,7 @@ export const Nodejs = () => {
               rejections using process.on(&#39;uncaughtException&#39;) and
               process.on(&#39;unhandledRejection&#39;).
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 process.<span className="hljs-literal">on</span>(
                 <span className="hljs-string">'uncaughtException'</span>,{" "}
@@ -847,6 +943,18 @@ export const Nodejs = () => {
                 &#123;
                 <span className="hljs-regexp">//</span> Handle unhandled promise
                 rejections &#125;)
+              </code>
+            </pre> */}
+
+            <pre>
+              <code>
+                {`process.on('uncaughtException', (error) => {
+    // Handle uncaught exceptions
+  });
+            
+    process.on('unhandledRejection', (error) => {
+    // Handle unhandled promise rejections
+  })`}
               </code>
             </pre>
           </li>
@@ -866,7 +974,7 @@ export const Nodejs = () => {
           functionality or data that you want to make available for use in other
           modules.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             {" "}
             // math.js const <span className="hljs-keyword">add </span>= (a,{" "}
@@ -880,6 +988,18 @@ export const Nodejs = () => {
             <span className="hljs-keyword">subtract</span>&#125;
             <span className="hljs-comment">;</span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {` // math.js
+    const add = (a, b) => a + b;
+     const subtract = (a, b) => a - b;
+            
+    module.exports = {
+      add,
+       subtract
+    };`}
+          </code>
         </pre>
         <p>
           In this module, <strong>module.exports</strong> is assigned an object
@@ -887,7 +1007,7 @@ export const Nodejs = () => {
           required in another file, the object containing these functions will
           be returned, allowing other modules to use them:
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">// app.js</span>
             <span className="hljs-keyword">const</span> math ={" "}
@@ -902,6 +1022,15 @@ export const Nodejs = () => {
             <span className="hljs-number">3</span>));{" "}
             <span className="hljs-comment">// Output: 2</span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`// app.js
+    const math = require('./math');
+            
+    console.log(math.add(5, 3));       // Output: 8
+    console.log(math.subtract(5, 3));  // Output: 2`}
+          </code>
         </pre>
         <h4 id="27-what-is-the-purpose-of-the-__dirname-variable-in-node-js-">
           27. What is the purpose of the
@@ -912,13 +1041,20 @@ export const Nodejs = () => {
           the directory name of the current module. It provides the absolute
           path to the directory containing the currently executing script.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">// Example</span>
             console.<span className="hljs-built_in">log</span>(__dirname);{" "}
             <span className="hljs-comment">
               // Outputs the absolute path of the current directory
             </span>
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`// Example
+console.log(__dirname); // Outputs the absolute path of the current directory`}
           </code>
         </pre>
         <h4 id="28-what-is-the-purpose-of-the-fs-module-in-node-js-">
@@ -943,7 +1079,7 @@ export const Nodejs = () => {
               We read the content of a file asynchronously using{" "}
               <code>fs.readFile()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-comment">
                   // Reading a file asynchronously
@@ -961,6 +1097,18 @@ export const Nodejs = () => {
                 <span className="hljs-keyword">File</span> content:', data);
                 &#125;);
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Reading a file asynchronously
+    fs.readFile('example.txt', 'utf8', (err, data) => {
+    if (err) {
+    console.error('Error reading file:', err);
+    return;
+    }
+    console.log('File content:', data);
+});`}
+              </code>
             </pre>
           </li>
           <li>
@@ -968,7 +1116,7 @@ export const Nodejs = () => {
               We write data to a new file asynchronously using{" "}
               <code>fs.writeFile()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-regexp">//</span> Writing to a file
                 asynchronously fs.writeFile(
@@ -988,13 +1136,25 @@ export const Nodejs = () => {
                 </span>
                 ); &#125;);
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Writing to a file asynchronously
+    fs.writeFile('newFile.txt', 'Hello, World!', (err) => {
+    if (err) {
+    console.error('Error writing to file:', err);
+    return;
+    }
+    console.log('Data has been written to newFile.txt');
+  });`}
+              </code>
             </pre>
           </li>
           <li>
             <p>
               We check if a directory exists using <code>fs.access()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-regexp">//</span> Checking{" "}
                 <span className="hljs-keyword">if</span> a directory exists
@@ -1011,13 +1171,25 @@ export const Nodejs = () => {
                 <span className="hljs-built_in">console</span>.log(
                 <span className="hljs-string">'myDirectory exists'</span>); &#125;);
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Checking if a directory exists
+    fs.access('myDirectory', fs.constants.F_OK, (err) => {
+    if (err) {
+    console.error('myDirectory does not exist');
+    return;
+  }
+    console.log('myDirectory exists');
+});`}
+              </code>
             </pre>
           </li>
           <li>
             <p>
               We create a new directory using <code>fs.mkdir()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-comment">// Creating a directory</span>
                 fs.<span className="hljs-keyword">mkdir</span>('myNewDirectory', (
@@ -1031,13 +1203,25 @@ export const Nodejs = () => {
                 <span className="hljs-built_in">log</span>('myNewDirectory created
                 successfully'); &#125;);
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Creating a directory
+    fs.mkdir('myNewDirectory', (err) => {
+    if (err) {
+    console.error('Error creating directory:', err);
+    return;
+  }
+    console.log('myNewDirectory created successfully');
+});`}
+              </code>
             </pre>
           </li>
           <li>
             <p>
               We list the files in a directory using <code>fs.readdir()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-regexp">//</span> Listing files{" "}
                 <span className="hljs-keyword">in</span> a directory fs.readdir(
@@ -1055,13 +1239,25 @@ export const Nodejs = () => {
                 <span className="hljs-string">'Files in myNewDirectory:'</span>,
                 files); &#125;);
               </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Listing files in a directory
+    fs.readdir('myNewDirectory', (err, files) => {
+    if (err) {
+    console.error('Error reading directory:', err);
+    return;
+  }
+    console.log('Files in myNewDirectory:', files);
+});`}
+              </code>
             </pre>
           </li>
           <li>
             <p>
               We delete a file using <code>fs.unlink()</code>.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-comment">// Deleting a file</span>
                 fs.unlink('newFile.txt', (<span className="hljs-keyword">err</span>)
@@ -1075,6 +1271,18 @@ export const Nodejs = () => {
                 <span className="hljs-keyword">return</span>; &#125; console.
                 <span className="hljs-built_in">log</span>('newFile.txt has been
                 deleted'); &#125;);
+              </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Deleting a file
+    fs.unlink('newFile.txt', (err) => {
+    if (err) {
+    console.error('Error deleting file:', err);
+    return;
+   }
+    console.log('newFile.txt has been deleted');
+});`}
               </code>
             </pre>
           </li>
@@ -1093,7 +1301,7 @@ export const Nodejs = () => {
               parts of the URL that are used to capture values. They are defined
               in the route path using a colon followed by the parameter name.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-comment">
                   // Define a route with a route parameter
@@ -1104,6 +1312,15 @@ export const Nodejs = () => {
                 <span className="hljs-keyword">const</span> userId = req.
                 <span className="hljs-keyword">params</span>.userId; res.send(`User
                 ID: $&#123;userId&#125;`); &#125;);
+              </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`// Define a route with a route parameter
+    app.get('/users/:userId', (req, res) => {
+        const userId = req.params.userId;
+        res.send("User ID: $.{userId});
+    });`}
               </code>
             </pre>
           </li>
@@ -1117,20 +1334,21 @@ export const Nodejs = () => {
               <code>
                 <span className="hljs-comment">
                   // Define a route with query parameters
-                </span>
+                </span> <br />
                 <span className="hljs-keyword">app</span>.
                 <span className="hljs-built_in">get</span>('/
                 <span className="hljs-keyword">search</span>', (req, res) =&gt;
-                &#123;
+                &#123; <br />
                 <span className="hljs-keyword">const</span>{" "}
                 <span className="hljs-keyword">query</span> = req.
-                <span className="hljs-keyword">query</span>.q; res.send(`
+                <span className="hljs-keyword">query</span>.q; <br /> res.send(`
                 <span className="hljs-keyword">Search</span>{" "}
                 <span className="hljs-keyword">query</span>:{" "}
                 <span className="hljs-variable">$&#123;query&#125;</span>`);
-                &#125;);
+                &#125;<br /> );
               </code>
             </pre>
+          
           </li>
           <li>
             <p>
@@ -1142,17 +1360,17 @@ export const Nodejs = () => {
               <code>
                 <span className="hljs-comment">
                   // Define a route with both route and query parameters
-                </span>
+                </span> <br />
                 <span className="hljs-keyword">app</span>.
                 <span className="hljs-built_in">get</span>('/users/:userId/orders',
-                (req, res) =&gt; &#123;
+                (req, res) =&gt; &#123; <br />
                 <span className="hljs-keyword">const</span> userId =
-                req.params.userId;
+                req.params.userId; <br />
                 <span className="hljs-keyword">const</span> status = req.
-                <span className="hljs-keyword">query</span>.status; res.send(`User
+                <span className="hljs-keyword">query</span>.status; <br /> res.send(`User
                 ID: <span className="hljs-variable">$&#123;userId&#125;</span>,{" "}
                 <span className="hljs-keyword">Order</span> Status:{" "}
-                <span className="hljs-variable">$&#123;status&#125;</span>`);
+                <span className="hljs-variable">$&#123;status&#125;</span>`); <br />
                 &#125;);
               </code>
             </pre>
@@ -1272,7 +1490,7 @@ export const Nodejs = () => {
               HTTP requests (GET, POST, etc.) using the app.get(), app.post(),
               app.put(), app.delete(), etc. methods:
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 app.get(<span className="hljs-string">'/'</span>,{" "}
                 <span className="hljs-function">
@@ -1280,6 +1498,13 @@ export const Nodejs = () => {
                 </span>{" "}
                 &#123; res.send(<span className="hljs-string">'Hello, World!'</span>
                 ); &#125;);
+              </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});`}
               </code>
             </pre>
           </li>
@@ -1293,8 +1518,8 @@ export const Nodejs = () => {
               <code>
                 <span className="hljs-keyword">const</span> PORT ={" "}
                 <span className="hljs-built_in">process</span>.env.PORT ||{" "}
-                <span className="hljs-number">3000</span>; app.
-                <span className="hljs-built_in">listen</span>(PORT, () =&gt; &#123;
+                <span className="hljs-number">3000</span>; <br /> app.
+                <span className="hljs-built_in">listen</span>(PORT, () =&gt; &#123; <br />
                 console.log(`<span className="hljs-built_in">Server</span> is{" "}
                 <span className="hljs-built_in">running</span> on port
                 $&#123;PORT&#125;`); &#125;);
@@ -1304,21 +1529,21 @@ export const Nodejs = () => {
             <pre>
               <code>
                 <span className="hljs-keyword">const</span> express = require(
-                <span className="hljs-string">'express'</span>);
-                <span className="hljs-keyword">const</span> app = express();
-                <span className="hljs-comment">// Define a route</span>
+                <span className="hljs-string">'express'</span>); <br />
+                <span className="hljs-keyword">const</span> app = express(); <br />
+                <span className="hljs-comment">// Define a route</span> <br />
                 app.<span className="hljs-built_in">get</span>(
-                <span className="hljs-string">'/'</span>, (req, res) =&gt; &#123;
+                <span className="hljs-string">'/'</span>, (req, res) =&gt; &#123; <br />
                 res.send(<span className="hljs-string">'Hello, World!'</span>);
-                &#125;);
-                <span className="hljs-comment">// Start the server</span>
+                &#125;); <br />
+                <span className="hljs-comment">// Start the server</span> <br />
                 <span className="hljs-keyword">const</span> PORT ={" "}
                 <span className="hljs-built_in">process</span>.env.PORT ||{" "}
-                <span className="hljs-number">3000</span>; app.
-                <span className="hljs-built_in">listen</span>(PORT, () =&gt; &#123;
-                console.log(`<span className="hljs-built_in">Server</span> is{" "}
+                <span className="hljs-number">3000</span>; <br /> app.
+                <span className="hljs-built_in">listen</span>(PORT, () =&gt; &#123; <br />
+                console.log(`<span className="hljs-built_in">Server</span> is{" "} 
                 <span className="hljs-built_in">running</span> on port
-                $&#123;PORT&#125;`); &#125;);
+                $&#123;PORT&#125;`); <br /> &#125;);
               </code>
             </pre>
             <p>
@@ -1339,7 +1564,7 @@ export const Nodejs = () => {
           you can handle CORS by using middleware to set the appropriate CORS
           headers in the HTTP responses.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> express ={" "}
             <span className="hljs-keyword">require</span>(
@@ -1357,6 +1582,24 @@ export const Nodejs = () => {
             console.log(
             <span className="hljs-string">'Server is running on port 3000'</span>);
             &#125;);
+          </code>
+        </pre> */} 
+
+        <pre>
+          <code>
+            {`const express = require('express');
+const cors = require('cors');
+            
+const app = express();
+            
+// Enable CORS for all routes
+app.use(cors());
+            
+// Your routes and other middleware
+            
+  app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});`}
           </code>
         </pre>
 
@@ -1505,7 +1748,7 @@ export const Nodejs = () => {
             <p>
               <strong>Connect to MongoDB:</strong>
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-keyword">const</span> mongoose ={" "}
                 <span className="hljs-built_in">require</span>(
@@ -1533,6 +1776,19 @@ export const Nodejs = () => {
                 <span className="hljs-built_in">console</span>.error(
                 <span className="hljs-string">'Error connecting to MongoDB:'</span>,
                 error));
+              </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`const mongoose = require('mongoose');
+            
+  // Connection URI
+  const uri = 'mongodb://localhost:27017/mydatabase';
+            
+  // Connect to MongoDB
+  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(error => console.error('Error connecting to MongoDB:', error));`}
               </code>
             </pre>
             <p>
@@ -1580,7 +1836,7 @@ export const Nodejs = () => {
           methods provided by the URL module to parse, manipulate, and format
           URLs.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">// Import the URL module</span>
             <span className="hljs-keyword">const</span>{" "}
@@ -1608,6 +1864,28 @@ export const Nodejs = () => {
             <span className="hljs-string">'Path:'</span>, parsedUrl.pathname);
             <span className="hljs-built_in">console</span>.log(
             <span className="hljs-string">'Query:'</span>, parsedUrl.query);
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`// Import the URL module
+const url = require('url');
+            
+// Example URL string
+const urlString = 'https://www.example.com/path?query=string';
+            
+// Parse the URL string
+const parsedUrl = url.parse(urlString);
+            
+// Print the parsed URL object
+console.log(parsedUrl);
+            
+// Access different components of the URL object
+console.log('Protocol:', parsedUrl.protocol);
+console.log('Host:', parsedUrl.host);
+console.log('Path:', parsedUrl.pathname);
+console.log('Query:', parsedUrl.query);`}
           </code>
         </pre>
 
@@ -1663,7 +1941,7 @@ export const Nodejs = () => {
           </tbody>
         </table>
         <br />
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-built_in">console</span>.log(
             <span className="hljs-string">'Start'</span>);{" "}
@@ -1688,6 +1966,22 @@ export const Nodejs = () => {
             <span className="hljs-built_in">console</span>.log(
             <span className="hljs-string">'End'</span>);{" "}
             <span className="hljs-comment">// End</span>
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`console.log('Start');   // Start
+            
+setImmediate(() => {
+    console.log('setImmediate callback');  //setImmediate callback
+});
+            
+setTimeout(() => {
+    console.log('setTimeout callback');  //setTimeout callback
+}, 0);
+            
+console.log('End');  // End`}
           </code>
         </pre>
 
@@ -1718,7 +2012,7 @@ export const Nodejs = () => {
               the source to the destination without you having to manage it
               manually.
             </p>
-            <pre>
+            {/* <pre>
               <code>
                 <span className="hljs-keyword">const</span> fs ={" "}
                 <span className="hljs-built_in">require</span>(
@@ -1737,6 +2031,20 @@ export const Nodejs = () => {
                   // Pipe data from source to destination
                 </span>
                 readableStream.pipe(writableStream);
+              </code>
+            </pre> */}
+            <pre>
+              <code>
+                {`const fs = require('fs');
+            
+// Source: Read from input.txt
+const readableStream = fs.createReadStream('input.txt');
+            
+// Destination: Write to output.txt
+const writableStream = fs.createWriteStream('output.txt');
+            
+// Pipe data from source to destination
+readableStream.pipe(writableStream);`}
               </code>
             </pre>
           </li>
@@ -1784,7 +2092,7 @@ export const Nodejs = () => {
           <code>Buffer.from(buffer):</code> Copies the passed buffer data onto a
           new buffer.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             const buf1 = Buffer.alloc(10); // Creates a buffer of size 10
             <span className="hljs-built_in"> filled </span>with zeros
@@ -1792,6 +2100,13 @@ export const Nodejs = () => {
             3]); // Creates a buffer from an
             <span className="hljs-built_in"> array</span>const buf3 =
             Buffer.from('hello', 'utf-8'); // Creates a buffer from a string
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`const buf1 = Buffer.alloc(10); // Creates a buffer of size 10 filled with zeros
+const buf2 = Buffer.from([1, 2, 3]); // Creates a buffer from an array
+const buf3 = Buffer.from('hello', 'utf-8'); // Creates a buffer from a string`}
           </code>
         </pre>
 
@@ -1862,7 +2177,7 @@ export const Nodejs = () => {
         <h4 id="47-how-can-you-create-model-using-mongoose-">
           47. How can you create model using mongoose?
         </h4>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> mongoose ={" "}
             <span className="hljs-built_in">require</span>(
@@ -1881,6 +2196,22 @@ export const Nodejs = () => {
             <span className="hljs-comment">// Compile the schema into a model</span>
             <span className="hljs-keyword">const</span> User = mongoose.model(
             <span className="hljs-string">'User'</span>, userSchema);
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+            
+// Define a schema
+const userSchema = new Schema({
+    name: String,
+    email: { type: String, required: true, unique: true },
+    age: Number
+  });
+            
+// Compile the schema into a model
+const User = mongoose.model('User', userSchema);`}
           </code>
         </pre>
 
@@ -1903,7 +2234,7 @@ export const Nodejs = () => {
           This function is part of the EventEmitter class, which is a core
           module in Node.js for working with events.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> EventEmitter ={" "}
             <span className="hljs-built_in">require</span>(
@@ -1930,6 +2261,25 @@ export const Nodejs = () => {
             myEventHandler);
             <span className="hljs-comment">// Fire (emit) the 'myEvent' event</span>
             myEmitter.emit(<span className="hljs-string">'myEvent'</span>);
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`const EventEmitter = require('events');
+            
+    // Create an instance of EventEmitter
+    const myEmitter = new EventEmitter();
+            
+    // Define an event handler function
+    const myEventHandler = () => {
+        console.log('Event fired!');
+    };
+            
+    // Register the event handler function with the 'myEvent' event
+    myEmitter.on('myEvent', myEventHandler);
+            
+    // Fire (emit) the 'myEvent' event
+    myEmitter.emit('myEvent');`}
           </code>
         </pre>
 

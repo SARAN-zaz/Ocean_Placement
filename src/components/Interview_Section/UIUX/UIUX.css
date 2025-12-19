@@ -4,30 +4,26 @@
     max-width: 1400px;
     margin-inline: auto;
   }
-  .img-class-language-logo{
-    width: 210px;
-    height: 210px;
-  }
-      .question-answer h4{
+    .question-answer h4{
     margin-bottom:8px ;
   }
   .question-answer p {
     margin-bottom: 16px;
   }
   @media (max-width: 800px) {
-    .img-cls {
-      width: 400px;
-      
+
+    .main-container-interview-questions{
+      padding: 20px;
+    width: 98%;
+    max-width: 1400px;
+    margin-inline: auto;
     }
-    pre {
-      width: 350px;
   }
-  .precode {
-    width: 294px;
-}
+  @media (max-width: 480px) {
+
     .main-container-interview-questions{
       padding: 10px;
-    width:100%;
+    width: 100%;
     max-width: 1400px;
     margin-inline: auto;
     }

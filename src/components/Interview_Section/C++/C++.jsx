@@ -1,5 +1,5 @@
-// import "./C++.css";
-// import "../globalStyle.css";
+import "./C++.css";
+import "../globalStyle.css";
 import images from "../../../assets/C++/index";
 
 export const Cplusprogramming = () => {

@@ -34,7 +34,7 @@ export const JavascriptInterviewQues = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="question-answer">
         {/* <!-- 1 --> */}
         <h4 id="1-what-are-the-possible-ways-to-create-objects-in-javascript">
           1. What are the possible ways to create objects in JavaScript?
@@ -52,7 +52,7 @@ export const JavascriptInterviewQues = () => {
               The object literal syntax (or object initializer), is a
               comma-separated set of name-value pairs wrapped in curly braces.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-keyword">var</span>{" "}
                 <span className="hljs-class">
@@ -61,7 +61,16 @@ export const JavascriptInterviewQues = () => {
                 = &#123; name: <span className="hljs-string">"Sudheer"</span>, age:{" "}
                 <span className="hljs-number">34</span>, &#125;;
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+    {`var object = {
+    name: "Sudheer",
+    age: 34
+};`}
+  </code>
+</pre>
+
             <p>
               Object literal property values can be of any data type, including
               array, function, and nested object.
@@ -132,7 +141,7 @@ export const JavascriptInterviewQues = () => {
               The following example creates an object along with additional new
               properties.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 let vehicle = &#123;
                 <span className="hljs-symbol"> wheels:</span>{" "}
@@ -150,7 +159,28 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-string">"Golf"</span>, &#125;, &#125;; var car
                 = Object.create(vehicle, carProps); console.log(car);
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`let vehicle = {
+          wheels: "4",
+          fuelType: "Gasoline",
+          color: "Green",
+        };
+           let carProps = {
+                type: { 
+                  value: "Volkswagen"
+                 },
+                 model: { 
+                    value: "Golf"
+                   },
+                 };
+
+        var car = Object.create(vehicle, carProps);
+        console.log(car);`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
@@ -160,7 +190,7 @@ export const JavascriptInterviewQues = () => {
               In this approach, create any function and apply the new operator
               to create object instances.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-function">
                   <span className="hljs-keyword">function</span>{" "}
@@ -175,7 +205,19 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-keyword">new</span> Person(
                 <span className="hljs-string">"Sudheer"</span>);
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`function Person(name) {
+              this.name = name;
+              this.age = 21;
+            }
+
+            var object = new Person("Sudheer");
+`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
@@ -185,7 +227,7 @@ export const JavascriptInterviewQues = () => {
               This is similar to function constructor but it uses prototype for
               their properties and methods,
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-function">
                   <span className="hljs-keyword">function</span>{" "}
@@ -197,13 +239,22 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-keyword">var</span> object ={" "}
                 <span className="hljs-keyword">new</span> Person();
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`function Person() {}
+                 Person.prototype.name = "Sudheer";
+                 var object = new Person();
+`}
+  </code>
+</pre>
+
             <p>
               This is equivalent to creating an instance with Object.create
               method with a function prototype and then calling that function
               with an instance and parameters as arguments.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 function{" "}
                 <span className="hljs-function">
@@ -216,11 +267,18 @@ export const JavascriptInterviewQues = () => {
                   <span className="hljs-params">(x, y, z)</span>;
                 </span>
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`function func() {}
+                new func(x, y, z);`}
+  </code>
+</pre>
+
             <p>
               <strong>(OR)</strong>
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 // <span className="hljs-keyword">Create</span> a{" "}
                 <span className="hljs-keyword">new</span>{" "}
@@ -248,7 +306,20 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-string">'object'</span> ?{" "}
                 <span className="hljs-keyword">result</span> : newInstance);
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`// Create a new instance using function prototype
+var newInstance = Object.create(func.prototype);
+
+// Call the function
+var result = func.call(newInstance, x, y, z);
+
+// If the result is a non-null object then use it; otherwise, use the new instance
+console.log(result && typeof result === 'object' ? result : newInstance);`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
@@ -263,7 +334,7 @@ export const JavascriptInterviewQues = () => {
               The following code creates a new staff object by copying
               properties of his working company and the car he owns.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-attribute">const orgObj</span> = &#123;
                 company: <span className="hljs-string">"XYZ Corp"</span> &#125;;
@@ -272,14 +343,22 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-attribute">const staff</span> =
                 Object.assign(&#123;&#125;, orgObject, carObject);
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`const orgObj = { company: "XYZ Corp" };
+const carObj = { name: "Toyota" };
+const staff = Object.assign({}, orgObject, carObject);`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
               <strong>ES6 Class syntax:</strong>
             </p>
             <p>ES6 introduces class feature to create objects.</p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-class">
                   <span className="hljs-keyword">class</span>{" "}
@@ -293,7 +372,19 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-keyword">new</span> Person(
                 <span className="hljs-string">"Sudheer"</span>);
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+var object = new Person("Sudheer");`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
@@ -305,7 +396,7 @@ export const JavascriptInterviewQues = () => {
               way one can ensure that they don&#39;t accidentally create
               multiple instances.
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-keyword">var</span> object ={" "}
                 <span className="hljs-keyword">new</span> (
@@ -317,7 +408,15 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-keyword">this</span>.name ={" "}
                 <span className="hljs-string">"Sudheer"</span>; &#125;)();
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code className="lang-javascript">
+{`var object = new (function() {
+  this.name = "Sudheer";
+})();`}
+  </code>
+</pre>
+
           </li>
         </ol>
 
@@ -360,7 +459,7 @@ export const JavascriptInterviewQues = () => {
           <strong>Call:</strong> The call() method invokes a function with a
           given <code>this</code> value and arguments provided one by one
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">var</span> employee1 = &#123;{" "}
             <span className="hljs-attr">firstName</span>:{" "}
@@ -392,13 +491,28 @@ export const JavascriptInterviewQues = () => {
             </span>, <span className="hljs-string">"How are you?"</span>);{" "}
             <span className="hljs-comment">// Hello Jimmy Baily, How are you?</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`var employee1 = { firstName: "John", lastName: "Rodson" };
+                var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+                function invite(greeting1, greeting2) {
+                   console.log(greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+                   );
+                }
+
+                  invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
+                  invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?`}
+  </code>
+</pre>
+
         <p>
           <strong>Apply:</strong> Invokes the function with a given{" "}
           <code>this</code> value and allows you to pass in arguments as an
           array
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">var</span> employee1 = &#123;{" "}
             <span className="hljs-attr">firstName</span>:{" "}
@@ -470,7 +584,14 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"How are you?"</span>);{" "}
             <span className="hljs-comment">// Hello Jimmy Baily, How are you?</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`invite.apply(employee1, ["Hello", "How are you?"]); // Hello John Rodson, How are you?
+invite.apply(employee2, ["Hello", "How are you?"]); // Hello Jimmy Baily, How are you?`}
+  </code>
+</pre>
+
         <p>
           Call and Apply are pretty much interchangeable. Both execute the
           current function immediately. You need to decide whether it’s easier
@@ -530,7 +651,7 @@ export const JavascriptInterviewQues = () => {
           then it selects till the end of the array.
         </p>
         <p>Some of the examples of this method are,</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             let arrayIntegers = [<span className="hljs-number">1</span>,{" "}
             <span className="hljs-number">2</span>,{" "}
@@ -548,7 +669,16 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-number">4</span>);{" "}
             <span className="hljs-comment">//returns [5]</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`let arrayIntegers = [1, 2, 3, 4, 5];
+let arrayIntegers1 = arrayIntegers.slice(0, 2); // returns [1,2]
+let arrayIntegers2 = arrayIntegers.slice(2, 3); // returns [3]
+let arrayIntegers3 = arrayIntegers.slice(4);    // returns [5]`}
+  </code>
+</pre>
+
         <p>
           <strong>Note:</strong> Slice method doesn&#39;t mutate the original
           array but it returns the subset as a new array.
@@ -567,7 +697,7 @@ export const JavascriptInterviewQues = () => {
           deleted. Each additional argument is added to the array.
         </p>
         <p>Some of the examples of this method are:</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             let arrayIntegersOriginal1 = [<span className="hljs-number">1</span>,{" "}
             <span className="hljs-number">2</span>,{" "}
@@ -604,7 +734,19 @@ export const JavascriptInterviewQues = () => {
               //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
             </span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
+let arrayIntegersOriginal2 = [1, 2, 3, 4, 5];
+let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+
+let arrayIntegers1 = arrayIntegersOriginal1.splice(0, 2); // returns [1, 2]; original array: [3, 4, 5]
+let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; original array: [1, 2, 3]
+let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); // returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]`}
+  </code>
+</pre>
+
         <p>
           <strong>Note:</strong> Splice method modifies the original array and
           returns the deleted array.
@@ -726,7 +868,7 @@ export const JavascriptInterviewQues = () => {
           </li>
         </ol>
         <p>Some of the example which covers the above cases:</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-number">0</span> =={" "}
             <span className="hljs-literal">false</span>{" "}
@@ -772,7 +914,23 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-literal">false</span>, refer different objects{" "}
             <span className="hljs-keyword">in</span> memory
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`0 == false  // true
+0 === false // false
+1 == "1"    // true
+1 === "1"   // false
+null == undefined  // true
+null === undefined // false
+'0' == false  // true
+'0' === false // false
+NaN == NaN  || NaN === NaN  // false
+[] == []    || [] === []     // false, refer different objects in memory
+{} == {}    || {} === {}     // false, refer different objects in memory`}
+  </code>
+</pre>
+
 
         {/* <!-- 10 --> */}
 
@@ -784,7 +942,7 @@ export const JavascriptInterviewQues = () => {
           functions, and they cannot be used as constructors. Some of the
           examples of arrow functions are listed as below,
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> arrowFunc1 ={" "}
             <span className="hljs-function">
@@ -803,7 +961,15 @@ export const JavascriptInterviewQues = () => {
             </span>{" "}
             &#123;&#125; <span className="hljs-comment">// no parameters</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`const arrowFunc1 = (a, b) => a + b; // Multiple parameters
+const arrowFunc2 = a => a * 10;     // Single parameter
+const arrowFunc3 = () => {};        // No parameters`}
+  </code>
+</pre>
+
 
         {/* <!-- 11 --> */}
 
@@ -816,7 +982,7 @@ export const JavascriptInterviewQues = () => {
           function and can be assigned as a value to a variable. For example, in
           the below example, handler functions assigned to a listener
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> handler = () =&gt;
             console.log(
@@ -824,7 +990,13 @@ export const JavascriptInterviewQues = () => {
             ); document.addEventListener(
             <span className="hljs-string">"click"</span>, handler);
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`const handler = () => console.log("This is a click handler function");
+document.addEventListener("click", handler);`}
+  </code>
+</pre>
 
         {/* <!-- 12 --> */}
 
@@ -848,7 +1020,7 @@ export const JavascriptInterviewQues = () => {
           A higher-order function is a function that accepts another function as
           an argument or returns a function as a return value or both.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">const</span> firstOrderFunc ={" "}
             <span className="hljs-function">
@@ -866,7 +1038,16 @@ export const JavascriptInterviewQues = () => {
             ReturnFirstOrderFunc(); higherOrder(firstOrderFunc);
             <span className="javascript"></span>
           </code>
-        </pre>
+        </pre> */}
+
+        <pre>
+  <code className="lang-javascript">
+{`const firstOrderFunc = () => 
+             console.log("Hello, I am a First order function");
+             const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
+             higherOrder(firstOrderFunc);`}
+  </code>
+</pre>
 
         {/* <!-- 14 --> */}
 
@@ -900,7 +1081,7 @@ export const JavascriptInterviewQues = () => {
           Let's take an example of n-ary function and how it turns into a
           currying function,
         </p>
-        <pre>
+        {/* <pre>
           <code>
             const multiArgFunction = (a, b, c) =&gt; a + b + c;
             console.log(multiArgFunction(<span className="hljs-number">1</span>,{" "}
@@ -920,7 +1101,17 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-number">3</span>); // returns the number{" "}
             <span className="hljs-number">6</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`const multiArgFunction = (a, b, c) => a + b + c;
+            console.log(multiArgFunction(1, 2, 3)); // 6
+            const curryUnaryFunction = (a) => (b) => (c) => a + b + c;
+            curryUnaryFunction(1); // returns a function: b => c => 1 + b + c
+            curryUnaryFunction(1)(2); // returns a function: c => 3 + c
+            curryUnaryFunction(1)(2)(3); // returns 6`}
+  </code>
+</pre>
 
         {/* <!-- 16 --> */}
 
@@ -936,7 +1127,7 @@ export const JavascriptInterviewQues = () => {
           Let&#39;s take an example to see the difference between pure and
           impure functions,
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">//Impure</span>
             <span className="hljs-keyword">let</span> numberArray = [];
@@ -963,7 +1154,23 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-built_in">console</span>.log(numberArray);{" "}
             <span className="hljs-comment">// returns [6]</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`// Impure
+            let numberArray = [];
+            const impureAddNumber = (number) => numberArray.push(number);
+            // Pure
+            const pureAddNumber = (number) => (argNumberArray) => 
+              argNumberArray.concat([number]);
+
+            //Display the result
+            console.log(impureAddNumber(6)); // returns 1
+            console.log(numberArray); // returns [6]
+            console.log(pureAddNumber(7)(numberArray)); // returns [6, 7]
+            console.log(numberArray); // returns [6]`}
+  </code>
+</pre>
         <p>
           As per the above code snippets, the <strong>Push</strong> function is
           impure itself by altering the array and returning a push number index
@@ -995,7 +1202,7 @@ export const JavascriptInterviewQues = () => {
           locally to an entire function regardless of block scope.
         </p>
         <p>Let&#39;s take an example to demonstrate the usage,</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-keyword">let</span> counter ={" "}
@@ -1011,7 +1218,18 @@ export const JavascriptInterviewQues = () => {
               // 30 (because the variable in if block won't exist here)
             </span>
           </code>
-        </pre>
+        </pre> */}
+
+        <pre>
+  <code className="lang-javascript">
+{`    let counter = 30;
+             if (counter === 30) {
+               let counter = 31;
+               console.log(counter); // 31
+             }
+             console.log(counter); // 30`}
+  </code>
+</pre>
 
         {/* <!-- 18 --> */}
 
@@ -1048,7 +1266,7 @@ export const JavascriptInterviewQues = () => {
           </tbody>
         </table>
         <br />
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-function">
@@ -1078,7 +1296,23 @@ export const JavascriptInterviewQues = () => {
             </span>
             &#125; userDetails(<span className="hljs-string">"John"</span>);
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`function userDetails(username) {
+  if (username) {
+    console.log(salary); // undefined due to hoisting
+    console.log(age);    // ReferenceError: Cannot access 'age' before initialization
+    let age = 30;
+    var salary = 10000;
+  }
+  console.log(salary); // 10000 (accessible due to function scope)
+  console.log(age);    // error: age is not defined (due to block scope)
+}
+userDetails("John");`}
+  </code>
+</pre>
+
 
         {/* <!-- 19 --> */}
         <h4 id="19-what-is-the-reason-to-choose-the-name-let-as-a-keyword">
@@ -1102,7 +1336,7 @@ export const JavascriptInterviewQues = () => {
           it will cause errors because there is only one block. For example, the
           below code block throws a syntax error as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-keyword">let</span> counter ={" "}
@@ -1118,12 +1352,28 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">// SyntaxError for redeclaration.</span>
             <span className="hljs-keyword">break</span>; &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`let counter = 1;
+
+switch (x) {
+  case 0:
+    let name;
+    break;
+
+  case 1:
+    let name; // SyntaxError for redeclaration
+    break;
+}`}
+  </code>
+</pre>
+
         <p>
           To avoid this error, you can create a nested block inside a case
           clause and create a new block scoped lexical environment.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-keyword">let</span> counter ={" "}
@@ -1141,7 +1391,25 @@ export const JavascriptInterviewQues = () => {
             </span>
             <span className="hljs-keyword">break</span>; &#125; &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`let counter = 1;
+
+switch (x) {
+  case 0: {
+    let name;
+    break;
+  }
+
+  case 1: {
+    let name; // No SyntaxError for redeclaration
+    break;
+  }
+}`}
+  </code>
+</pre>
+
 
         {/* <!-- 21 --> */}
         <h4 id="21-what-is-the-temporal-dead-zone">
@@ -1157,7 +1425,7 @@ export const JavascriptInterviewQues = () => {
           temporal dead zone.
         </p>
         <p>Let&#39;s see this behavior with an example,</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-function">
@@ -1175,7 +1443,18 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">let</span> counter2 ={" "}
             <span className="hljs-number">2</span>; &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`function somemethod() {
+  console.log(counter1); // undefined
+  console.log(counter2); // ReferenceError
+  var counter1 = 1;
+  let counter2 = 2;
+}`}
+  </code>
+</pre>
+
         {/* <!-- 22 --> */}
         <h4 id="22-what-is-an-iife-immediately-invoked-function-expression-">
           22. What is an IIFE (Immediately Invoked Function Expression)?
@@ -1185,19 +1464,27 @@ export const JavascriptInterviewQues = () => {
           function that runs as soon as it is defined. The signature of it would
           be as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             (<span className="hljs-name">function</span> () &#123; // logic here
             &#125;)()<span className="hljs-comment">;</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`(function () {
+  // logic here
+})();`}
+  </code>
+</pre>
+
         <p>
           The primary reason to use an IIFE is to obtain data privacy because
           any variables declared within the IIFE cannot be accessed by the
           outside world. i.e, If you try to access variables from the IIFE then
           it throws an error as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             (
             <span className="hljs-function">
@@ -1211,7 +1498,17 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-built_in">console</span>.log(message);{" "}
             <span className="hljs-comment">//Error: message is not defined</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`(function () {
+  var message = "IIFE";
+  console.log(message);
+})();
+console.log(message); // Error: message is not defined`}
+  </code>
+</pre>
+
 
         {/* <!-- 23 --> */}
         <h4 id="23-how-do-you-decode-or-encode-a-url-in-javascript-">
@@ -1230,7 +1527,7 @@ export const JavascriptInterviewQues = () => {
           <code>/ ? : @ &amp; = + $ #</code> then you need to use{" "}
           <code>encodeURIComponent()</code>.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">let</span>{" "}
             <span className="hljs-attr">uri</span> ={" "}
@@ -1242,7 +1539,14 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">let</span>{" "}
             <span className="hljs-attr">decoded_uri</span> = decodeURI(encoded_uri);
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`let uri = "employeeDetails?name=john&occupation=manager";
+let encoded_uri = encodeURI(uri);let decoded_uri = decodeURI(encoded_uri);`}
+  </code>
+</pre>
+
 
         {/* <!-- 24 --> */}
         <h4 id="24-what-is-memoization">24. What is memoization?</h4>
@@ -1255,7 +1559,7 @@ export const JavascriptInterviewQues = () => {
           function is executed and then the result is added to the cache.
           Let&#39;s take an example of adding function with memoization,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-keyword">const</span> memoizAddition ={" "}
@@ -1297,7 +1601,30 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-number">20</span>));{" "}
             <span className="hljs-comment">//output: 40 cached</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`const memoizAddition = () => {
+  let cache = {};
+  return (value) => {
+    if (value in cache) {
+      console.log("Fetching from cache");
+      return cache[value];
+    } else {
+      console.log("Calculating result");
+      let result = value + 20;
+      cache[value] = result;
+      return result;
+    }
+  };
+};
+// returned function from memoizAddition
+const addition = memoizAddition();
+console.log(addition(20)); // output: 40 calculated
+console.log(addition(20)); // output: 40 cached`}
+  </code>
+</pre>
+
 
         {/* <!-- 25 --> */}
         <h4 id="25-what-is-hoisting">25. What is Hoisting?</h4>
@@ -1307,16 +1634,23 @@ export const JavascriptInterviewQues = () => {
           code execution. Remember that JavaScript only hoists declarations, not
           initialisation. Let&#39;s take a simple example of variable hoisting,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-built_in">console</span>.log(message);{" "}
             <span className="hljs-comment">//output : undefined</span>
             <span className="hljs-keyword">var</span> message ={" "}
             <span className="hljs-string">"The variable Has been hoisted"</span>;
           </code>
-        </pre>
-        <p> The above code looks like as below to the interpreter,</p>
+        </pre> */}
         <pre>
+  <code className="lang-javascript">
+{`console.log(message); // output: undefined
+var message = "The variable has been hoisted";`}
+  </code>
+</pre>
+
+        <p> The above code looks like as below to the interpreter,</p>
+        {/* <pre>
           <code className="lang-javascript">
             var message<span className="hljs-comment">;</span>
             console.log(message)<span className="hljs-comment">;</span>
@@ -1324,9 +1658,18 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"The variable Has been hoisted"</span>
             <span className="hljs-comment">;</span>
           </code>
-        </pre>
+        </pre> */}
+  <pre>
+  <code className="lang-javascript">
+{`var message;
+console.log(message);
+message = "The variable has been hoisted";`}
+  </code>
+</pre>
+
+
         <p> In the same fashion, function declarations are hoisted too</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             message(<span className="hljs-string">"Good morning"</span>);{" "}
             <span className="hljs-comment">//Good morning</span>
@@ -1338,7 +1681,17 @@ export const JavascriptInterviewQues = () => {
             &#123;
             <span className="hljs-built_in">console</span>.log(name); &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`message("Good morning"); // Good morning
+
+function message(name) {
+  console.log(name);
+}`}
+  </code>
+</pre>
+
         <p>
           This hoisting makes functions to be safely used in code before they
           are declared.
@@ -1352,7 +1705,7 @@ export const JavascriptInterviewQues = () => {
           JavaScript’s existing prototype-based inheritance. For example, the
           prototype based inheritance written in function expression as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-function">
@@ -1376,9 +1729,22 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">this</span>.color +{" "}
             <span className="hljs-string">" color"</span>; &#125;;
           </code>
-        </pre>
-        <p> Whereas ES6 class can be defined as an alternative</p>
+        </pre> */}
         <pre>
+  <code className="lang-javascript">
+{`function Bike(model, color) {
+  this.model = model;
+  this.color = color;
+}
+
+Bike.prototype.getDetails = function () {
+  return this.model + " bike has " + this.color + " color";
+};`}
+  </code>
+</pre>
+
+        <p> Whereas ES6 class can be defined as an alternative</p>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-class">
@@ -1396,7 +1762,22 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">this</span>.color +{" "}
             <span className="hljs-string">" color"</span>; &#125; &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code className="lang-javascript">
+{`class Bike {
+  constructor(color, model) {
+    this.color = color;
+    this.model = model;
+  }
+
+  getDetails() {
+    return this.model + " bike has " + this.color + " color";
+  }
+}`}
+  </code>
+</pre>
+
 
         {/* <!-- 27 --> */}
         <h4 id="27-what-are-closures">27. What are closures?</h4>
@@ -1406,7 +1787,7 @@ export const JavascriptInterviewQues = () => {
           that has access to the outer or enclosing function’s variables. The
           closure has three scope chains
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-number">1</span>. Own scope where variables
             defined <span className="hljs-keyword">between </span>
@@ -1417,9 +1798,17 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-number">3</span>.{" "}
             <span className="hljs-meta">Global</span> variables
           </code>
-        </pre>
-        <p> Let&#39;s take an example of closure concept,</p>
+        </pre> */}
         <pre>
+  <code>
+{`1. Own scope where variables are defined between its curly brackets
+2. Outer function’s variables
+3. Global variables`}
+  </code>
+</pre>
+
+        <p> Let&#39;s take an example of closure concept,</p>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-function">
               <span className="hljs-keyword">function</span>{" "}
@@ -1443,7 +1832,22 @@ export const JavascriptInterviewQues = () => {
             myFunction(<span className="hljs-string">"Hello Mr."</span>);{" "}
             <span className="hljs-comment">//output: Hello Mr. John</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+{`function Welcome(name) {
+  var greetingInfo = function (message) {
+    console.log(message + " " + name);
+  };
+  return greetingInfo;
+}
+
+var myFunction = Welcome("John");
+myFunction("Welcome ");   // Output: Welcome John
+myFunction("Hello Mr.");  // Output: Hello Mr. John`}
+  </code>
+</pre>
+
         <p>
           As per the above code, the inner function(i.e, greetingInfo) has
           access to the variables in the outer function scope(i.e, Welcome) even
@@ -1466,13 +1870,21 @@ export const JavascriptInterviewQues = () => {
         <p>
           Below are the list of benefits using modules in javascript ecosystem
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-bullet">1. </span>Maintainability
             <span className="hljs-bullet">2. </span>Reusability
             <span className="hljs-bullet">3. </span>Namespacing
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+{`1. Maintainability
+2. Reusability
+3. Namespacing`}
+  </code>
+</pre>
+
 
         {/* <!-- 30 --> */}
         <h4 id="30-what-is-scope-in-javascript">
@@ -1537,7 +1949,7 @@ export const JavascriptInterviewQues = () => {
           more intuitive fashion than using cookies. The web storage provides
           two mechanisms for storing data on the client.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-number">1</span>. <b>Local storage:</b> It stores{" "}
             <span className="hljs-keyword">data</span>{" "}
@@ -1552,7 +1964,14 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">when</span> the browser tab{" "}
             <span className="hljs-keyword">is</span> closed.
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+{`1. Local storage: It stores data for the current origin with no expiration date.
+2. Session storage: It stores data for one session and the data is lost when the browser tab is closed.`}
+  </code>
+</pre>
+
 
         {/* <!-- 36 --> */}
         <h4 id="36-what-is-a-post-message">36. What is a post message?</h4>
@@ -1593,7 +2012,7 @@ export const JavascriptInterviewQues = () => {
           Cookies are used to remember information about the user profile(such
           as username). It basically involves two steps,
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-number">1</span>. When a{" "}
             <span className="hljs-keyword">user</span>{" "}
@@ -1607,7 +2026,13 @@ export const JavascriptInterviewQues = () => {
             remembers the <span className="hljs-keyword">user</span>{" "}
             <span className="hljs-title">profile</span>.
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+{`1.When a user visits a web page, the user profile can be stored in a cookie.
+2.Next time the user visits the page, the cookie remembers the user profile.`}
+  </code>
+</pre>
 
         {/* <!-- 39 --> */}
         <h4 id="39-what-are-the-options-in-a-cookie">
@@ -1626,6 +2051,7 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">in</span> UTC time
           </code>
         </pre>
+        <br/>
         <pre>
           <code className="lang-javascript">
             document.cookie ={" "}
@@ -1635,6 +2061,7 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">;</span>
           </code>
         </pre>
+        <br/>
         <pre>
           <code>
             <span className="hljs-number">1.</span> By default,{" "}
@@ -1648,6 +2075,7 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">a</span> path parameter.
           </code>
         </pre>
+        <br/>
         <pre>
           <code className="lang-javascript">
             document.cookie ={" "}
@@ -1666,7 +2094,7 @@ export const JavascriptInterviewQues = () => {
           example, you can delete a username cookie in the current page as
           below.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             document.cookie =
             <span className="hljs-string">
@@ -1674,7 +2102,14 @@ export const JavascriptInterviewQues = () => {
             </span>
             <span className="hljs-comment">;</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`document.cookie = 
+    "username=; expires=Fri, 07 Jun 2019 00:00:00 UTC; path=/;";`}
+  </code>
+</pre>
+
         <p>
           {" "}
           <strong>Note:</strong> You should define the cookie path option to
@@ -1756,7 +2191,7 @@ export const JavascriptInterviewQues = () => {
           a specific domain and storage type (session or local). For example,
           you can read and write on local storage objects as below
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-built_in">local</span>Storage.setItem(
             <span className="hljs-string">"logo"</span>, document.getElementById(
@@ -1764,7 +2199,14 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-built_in">local</span>Storage.getItem(
             <span className="hljs-string">"logo"</span>);
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`localStorage.setItem("logo", document.getElementById("logo").value);
+localStorage.getItem("logo");`}
+  </code>
+</pre>
+
 
         {/* <!-- 44 --> */}
         <h4 id="44-what-are-the-methods-available-on-session-storage">
@@ -1774,7 +2216,7 @@ export const JavascriptInterviewQues = () => {
           The session storage provided methods for reading, writing and clearing
           the session data
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             // Save <span className="hljs-meta">data</span> to sessionStorage
@@ -1794,7 +2236,23 @@ export const JavascriptInterviewQues = () => {
             sessionStorage sessionStorage.clear()
             <span className="hljs-comment">;</span>
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`// Save data to sessionStorage
+sessionStorage.setItem("key", "value");
+
+// Get saved data from sessionStorage
+let data = sessionStorage.getItem("key");
+
+// Remove saved data from sessionStorage
+sessionStorage.removeItem("key");
+
+// Remove all saved data from sessionStorage
+sessionStorage.clear();`}
+  </code>
+</pre>
+
 
         {/* <!-- 45 --> */}
         <h4 id="45-what-is-a-storage-event-and-its-event-handler">
@@ -1806,7 +2264,7 @@ export const JavascriptInterviewQues = () => {
           is an EventHandler for processing storage events. The syntax would be
           as below
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-built_in">window</span>.onstorage ={" "}
             <span className="hljs-function">
@@ -1815,12 +2273,18 @@ export const JavascriptInterviewQues = () => {
             </span>
             ;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`window.onstorage = function Ref()`}
+  </code>
+</pre>
+
         <p>
           Let&#39;s take the example usage of onstorage event handler which logs
           the storage key and it&#39;s values
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-built_in">window</span>.onstorage ={" "}
@@ -1836,7 +2300,23 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"."</span>
             ); &#125;;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`window.onstorage = function (e) {
+                     console.log(
+                            "The " + 
+                            e.key + 
+                            " key has been changed from " + 
+                            e.oldValue + 
+                            " to " + 
+                            e.newValue + 
+                            "."
+                   );
+                };`}
+  </code>
+</pre>
+
         <h4 id="46-why-do-you-need-web-storage">
           46. Why do you need web storage
         </h4>
@@ -1853,7 +2333,7 @@ export const JavascriptInterviewQues = () => {
           You need to check browser support for localStorage and sessionStorage
           before using web storage,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">if</span> (typeof{" "}
             <span className="hljs-type">Storage</span> !== "undefined") &#123; //{" "}
@@ -1862,7 +2342,18 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-type">No</span> <span className="hljs-type">Web</span>{" "}
             <span className="hljs-type">Storage</span> support.. &#125;
           </code>
-        </pre>
+        </pre> */}
+
+        <pre>
+  <code>
+    {`if (typeof Storage !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support.
+}`}
+  </code>
+</pre>
+
 
         {/* <!-- 48 --> */}
 
@@ -1870,7 +2361,7 @@ export const JavascriptInterviewQues = () => {
           48. How do you check web workers browser support
         </h4>
         <p>You need to check browser support for web workers before using it</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">if</span> (typeof{" "}
             <span className="hljs-type">Worker</span> !== "undefined") &#123; //
@@ -1879,7 +2370,17 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-type">No</span> <span className="hljs-type">Web</span>{" "}
             <span className="hljs-type">Worker</span> support.. &#125;
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`if (typeof Worker !== "undefined") {
+  // code for Web worker support.
+} else {
+  // Sorry! No Web Worker support.
+}`}
+  </code>
+</pre>
+
 
         {/* <!-- 49 --> */}
 
@@ -1896,7 +2397,7 @@ export const JavascriptInterviewQues = () => {
               Create a Web Worker File: You need to write a script to increment
               the count value. Let&#39;s name it as counter.js
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 let i = <span className="hljs-number">0</span>
                 <span className="hljs-comment">;</span>
@@ -1909,7 +2410,19 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-comment">;</span>
                 &#125; timedCount()<span className="hljs-comment">;</span>
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code>
+    {`let i = 0;
+function timedCount() {
+  i = i + 1;
+  postMessage(i);
+  setTimeout("timedCount()", 500);
+}
+timedCount();`}
+  </code>
+</pre>
+ 
             <p>
               Here postMessage() method is used to post a message back to the
               HTML page
@@ -1921,7 +2434,7 @@ export const JavascriptInterviewQues = () => {
               checking for browser support. Let&#39;s name this file as
               web_worker_example.js
             </p>
-            <pre>
+            {/* <pre>
               <code className="lang-javascript">
                 <span className="hljs-keyword">if</span> (
                 <span className="hljs-keyword">typeof</span> w =={" "}
@@ -1929,9 +2442,17 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-keyword">new</span> Worker(
                 <span className="hljs-string">"counter.js"</span>); &#125;
               </code>
-            </pre>
-            <p>and we can receive messages from web worker</p>
+            </pre> */}
             <pre>
+  <code>
+    {`if (typeof w == "undefined") {
+  w = new Worker("counter.js");
+}`}
+  </code>
+</pre>
+
+            <p>and we can receive messages from web worker</p>
+            {/* <pre>
               <code className="lang-javascript">
                 w.onmessage ={" "}
                 <span className="hljs-function">
@@ -1943,7 +2464,15 @@ export const JavascriptInterviewQues = () => {
                 <span className="hljs-string">"message"</span>).innerHTML =
                 event.data; &#125;;
               </code>
-            </pre>
+            </pre> */}
+            <pre>
+  <code>
+    {`w.onmessage = function(event) {
+  document.getElementById("message").innerHTML = event.data;
+};`}
+  </code>
+</pre>
+
           </li>
           <li>
             <p>
@@ -1995,7 +2524,7 @@ export const JavascriptInterviewQues = () => {
           possible states: fulfilled, rejected, or pending.
         </p>
         <p>The syntax of Promise creation looks like below,</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">const</span> promise ={" "}
             <span className="hljs-keyword">new</span>{" "}
@@ -2008,9 +2537,17 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">// promise description</span>
             &#125;);
           </code>
-        </pre>
-        <p> The usage of a promise would be as below,</p>
+        </pre> */}
         <pre>
+  <code>
+    {`const promise = new Promise(function(resolve, reject) {
+  // promise description
+});`}
+  </code>
+</pre>
+
+        <p> The usage of a promise would be as below,</p>
+        {/* <pre>
           <code className="lang-javascript">
             const promise = <span className="hljs-keyword">new</span> Promise(
             <span className="hljs-function">
@@ -2031,7 +2568,19 @@ export const JavascriptInterviewQues = () => {
             </span>{" "}
             <span className="hljs-built_in">console</span>.log(value));
           </code>
-        </pre>
+        </pre> */}
+        <pre>
+  <code>
+    {`const promise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("I'm a Promise!");
+  }, 5000);
+}, (reject) => {});
+
+promise.then((value) => console.log(value));`}
+  </code>
+</pre>
+
         <p>The action flow of a promise will be as below,</p>
         <p>
           <img
@@ -2084,7 +2633,7 @@ export const JavascriptInterviewQues = () => {
           complete an action. Let&#39;s take a simple example of how to use
           callback function
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-function">
               <span className="hljs-keyword">function</span>{" "}
@@ -2104,7 +2653,23 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"Please enter your name."</span>);
             callback(name); &#125; outerFunction(callbackFunction);
           </code>
-        </pre>
+        </pre> */}
+
+        <pre>
+  <code>
+    {`function callbackFunction(name) {
+      console.log("Hello " + name);
+    }
+      
+    function outerFunction(callback) {
+      let name = prompt("Please enter your name.");
+        callback(name);
+      }
+      
+    outerFunction(callbackFunction);`}
+  </code>
+</pre>
+        
         <h4 id="55-why-do-we-need-callbacks">55. Why do we need callbacks?</h4>
         <p>
           The callbacks are needed because javascript is an event driven
@@ -2113,7 +2678,7 @@ export const JavascriptInterviewQues = () => {
           example with the first function invoking an API call(simulated by
           setTimeout) and the next function which logs the message.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-function">
@@ -2144,6 +2709,25 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">// Second function called</span>
             <span className="hljs-comment">// First function called</span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`function firstFunction() {
+            // Simulate a code delay
+            setTimeout(function () {
+              console.log("First function called");
+            }, 1000);
+          }
+          function secondFunction() {
+            console.log("Second function called");
+          }
+          firstFunction();
+          secondFunction();
+      
+          Output;
+          // Second function called
+          // First function called`}
+          </code>
         </pre>
         <p>
           As observed from the output, javascript didn&#39;t wait for the
@@ -2159,7 +2743,7 @@ export const JavascriptInterviewQues = () => {
           makes code hard to read and debug when dealing with asynchronous
           logic. The callback hell looks like below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             async1(
             <span className="hljs-function">
@@ -2182,6 +2766,20 @@ export const JavascriptInterviewQues = () => {
               <span className="hljs-params">()</span>
             </span>
             &#123; .... &#125;); &#125;); &#125;); &#125;);
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`async1(function(){
+        async2(function(){
+        async3(function(){
+        async4(function(){
+              ....
+            });
+          });
+        });
+      });`}
           </code>
         </pre>
 
@@ -2206,7 +2804,7 @@ export const JavascriptInterviewQues = () => {
           notifications. For example, you can receive messages from server as
           below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">if</span> (
             <span className="hljs-keyword">typeof</span> EventSource !=={" "}
@@ -2224,6 +2822,16 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"output"</span>).innerHTML += event.data +{" "}
             <span className="hljs-string">"&lt;br&gt;"</span>; &#125;; &#125;
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`if (typeof EventSource !== "undefined") {
+      var source = new EventSource("sse_generator.js");
+      source.onmessage = function (event) {
+      document.getElementById("output").innerHTML += event.data + "<br>";
+     };
+  }`}
+          </code>
         </pre>
 
         {/* <!-- 59 --> */}
@@ -2234,7 +2842,7 @@ export const JavascriptInterviewQues = () => {
           You can perform browser support for server-sent events before using it
           as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             <span className="hljs-keyword">if</span> (typeof{" "}
@@ -2243,6 +2851,16 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-type">Let</span>'s have some code here! &#125;
             else &#123; // <span className="hljs-type">No</span> server-sent events
             supported &#125;
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {` if (typeof EventSource !== "undefined") {
+            // Server-sent events supported. Let's have some code here!
+          } else {
+            // No server-sent events supported
+          }`}
           </code>
         </pre>
 
@@ -2277,7 +2895,7 @@ export const JavascriptInterviewQues = () => {
           actions sequentially one by one. This is known as callbacks in
           callbacks.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             {" "}
             loadScript(<span className="hljs-string">"/script1.js"</span>,{" "}
@@ -2307,6 +2925,23 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">// after all scripts are loaded</span>
             &#125;); &#125;); &#125;);
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`loadScript("/script1.js", function (script) {
+            console.log("first script is loaded");
+      
+            loadScript("/script2.js", function (script) {
+              console.log("second script is loaded");
+      
+              loadScript("/script3.js", function (script) {
+                console.log("third script is loaded");
+                // after all scripts are loaded
+              });
+            });
+          });`}
+          </code>
         </pre>
 
         {/* <!-- 63 --> */}
@@ -2316,7 +2951,7 @@ export const JavascriptInterviewQues = () => {
           another using promises is known as Promise chaining. Let&#39;s take an
           example of promise chaining for calculating the final result,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">new</span>{" "}
             <span className="hljs-built_in">Promise</span>(
@@ -2358,6 +2993,26 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">return</span> result *{" "}
             <span className="hljs-number">4</span>; &#125;);
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`new Promise(function (resolve, reject) {
+            setTimeout(() => resolve(1), 1000);
+          })
+            .then(function (result) {
+              console.log(result); // 1
+              return result * 2;
+            })
+            .then(function (result) {
+              console.log(result); // 2
+              return result * 3;
+            })
+            .then(function (result) {
+              console.log(result); // 6
+              return result * 4;
+            });`}
+          </code>
         </pre>
         <p>
           {" "}
@@ -2388,7 +3043,7 @@ export const JavascriptInterviewQues = () => {
           or any one of them gets rejected. For example, the syntax of
           promise.all method is below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             Promise.all([Promise1, Promise2, Promise3]) .
             <span className="hljs-keyword">then</span>(result) =&gt; &#123;{" "}
@@ -2401,7 +3056,15 @@ export const JavascriptInterviewQues = () => {
             </span>
             `))
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`Promise.all([Promise1, Promise2, Promise3]) .then(result) => {   console.log(result) }) .catch(error => console.log("Error in promises {error}"))`}
+          </code>
         </pre>
+
+      
         <p>
           {" "}
           <strong>Note:</strong> Remember that the order of the promises(output
@@ -2418,7 +3081,7 @@ export const JavascriptInterviewQues = () => {
           firstly resolved or rejected. Let&#39;s take an example of race()
           method where promise2 is resolved first
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">var</span> promise1 ={" "}
             <span className="hljs-keyword">new</span>{" "}
@@ -2450,6 +3113,21 @@ export const JavascriptInterviewQues = () => {
               // "two" // Both promises will resolve, but promise2 is faster
             </span>
             &#125;);
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`var promise1 = new Promise(function (resolve, reject) {
+     setTimeout(resolve, 500, "one");
+    });
+    var promise2 = new Promise(function (resolve, reject) {
+      setTimeout(resolve, 100, "two");
+    });
+      
+    Promise.race([promise1, promise2]).then(function (value) {
+    console.log(value); // "two" // Both promises will resolve, but promise2 is faster
+  });`}
           </code>
         </pre>
 
@@ -2487,7 +3165,7 @@ export const JavascriptInterviewQues = () => {
           beginning of a script or a function. If declared at the beginning of a
           script, it has global scope.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-meta">"use strict"</span>; x ={" "}
             <span className="hljs-number">3.14</span>;{" "}
@@ -2495,9 +3173,15 @@ export const JavascriptInterviewQues = () => {
               // This will cause an error because x is not declared
             </span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`"use strict";
+x = 3.14; // This will cause an error because x is not declared`}
+          </code>
         </pre>
         <p> and if you declare inside a function, it has local scope</p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             x = <span className="hljs-number">3.14</span>;{" "}
             <span className="hljs-comment">// This will not cause an error.</span>
@@ -2513,6 +3197,18 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-comment">// This will cause an error</span>
             &#125;
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`x = 3.14; // This will not cause an error.
+      myFunction();
+      
+function myFunction() {
+  "use strict";
+   y = 3.14; // This will cause an error
+}`}
+          </code>
         </pre>
 
         {/* <!-- 69 --> */}
@@ -2525,7 +3221,7 @@ export const JavascriptInterviewQues = () => {
           false, otherwise, it will be true. For example, you can test IE
           version using this expression as below,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">let</span>{" "}
             <span className="hljs-attr">isIE8</span> ={" "}
@@ -2537,13 +3233,20 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-literal">or</span>{" "}
             <span className="hljs-literal">false</span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`let isIE8 = false;
+isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
+console.log(isIE8); // returns true or false`}
+          </code>
         </pre>
         <p>
           {" "}
           If you don&#39;t use this expression then it returns the original
           value.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-built_in">console</span>
             .log(navigator.userAgent.match(
@@ -2552,7 +3255,14 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">or</span>{" "}
             <span className="hljs-literal">null</span>
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`console.log(navigator.userAgent.match(/MSIE 8.0/)); // returns either an Array or null`}
+          </code>
         </pre>
+
         <p>
           {" "}
           <strong>Note:</strong> The expression !! is not an operator, but it is
@@ -2567,7 +3277,7 @@ export const JavascriptInterviewQues = () => {
           The delete operator is used to delete the property as well as its
           value.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             var <span className="hljs-keyword">user</span> = &#123; firstName:{" "}
             <span className="hljs-string">"John"</span>, lastName:
@@ -2579,6 +3289,15 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-string">"John"</span>, lastName:
             <span className="hljs-string">"Doe"</span>&#125;
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`var user = { firstName: "John", lastName:"Doe", age: 20 };
+delete user.age;
+      
+console.log(user); // {firstName: "John", lastName:"Doe"}`}
+          </code>
         </pre>
 
         {/* <!-- 71 --> */}
@@ -2588,7 +3307,7 @@ export const JavascriptInterviewQues = () => {
           JavaScript variable. It returns the type of a variable or an
           expression.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             typeof <span className="hljs-string">"John Abraham"</span>;{" "}
             <span className="hljs-comment">// Returns "string"</span>
@@ -2602,6 +3321,13 @@ export const JavascriptInterviewQues = () => {
               // Returns "object" because all arrays are also objects
             </span>
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`typeof "John Abraham"; // Returns "string"
+typeof (1 + 2); // Returns "number"
+typeof [1, 2, 3]; // Returns "object" because all arrays are also objects`}
+          </code>
         </pre>
 
         {/* <!-- 72 --> */}
@@ -2613,7 +3339,7 @@ export const JavascriptInterviewQues = () => {
           a value, or declared but not initialized at all. The type of undefined
           value is undefined too.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             var user; <span className="hljs-regexp">//</span> Value{" "}
             <span className="hljs-keyword">is</span>{" "}
@@ -2624,6 +3350,12 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">typeof</span> user);{" "}
             <span className="hljs-regexp">//</span>
             <span className="hljs-literal">undefined</span>
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`var user; // Value is undefined, type is undefined
+console.log(typeof user); //undefined`}
           </code>
         </pre>
         <p>Any variable can be emptied by setting the value to undefined.</p>
@@ -2641,7 +3373,7 @@ export const JavascriptInterviewQues = () => {
           It is one of JavaScript&#39;s primitive values. The type of null value
           is object. You can empty the variable by setting the value to null.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-keyword">var</span> user ={" "}
             <span className="hljs-literal">null</span>;
@@ -2649,7 +3381,7 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-keyword">typeof</span> user);{" "}
             <span className="hljs-comment">//object</span>
           </code>
-        </pre>
+        </pre> */}
         {/* <!-- 74 --> */}
         <h4 id="74-what-is-the-difference-between-null-and-undefined">
           74. What is the difference between null and undefined
@@ -2764,7 +3496,7 @@ export const JavascriptInterviewQues = () => {
           load previous and next URLs in the history using back() and next()
           methods.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-function">
               <span className="hljs-keyword">function</span>{" "}
@@ -2780,6 +3512,16 @@ export const JavascriptInterviewQues = () => {
             </span>
             &#123;
             <span className="hljs-built_in">window</span>.history.forward(); &#125;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`function goBack() {
+      window.history.back();
+    }
+function goForward() {
+     window.history.forward();
+  }`}
           </code>
         </pre>
         <p>
@@ -2803,7 +3545,7 @@ export const JavascriptInterviewQues = () => {
           Let&#39;s take an input element to detect the CapsLock on/off behavior
           with an example,
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-html">
             <span className="hljs-tag">
               &lt;<span className="hljs-name">input</span>{" "}
@@ -2848,6 +3590,26 @@ export const JavascriptInterviewQues = () => {
               &lt;/<span className="hljs-name">script</span>&gt;
             </span>
           </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`<input type="password" onmousedown="enterInput(event)" />
+      
+      <p id="feedback"></p>
+      
+      <script>
+        function enterInput(e) {
+        var flag = e.getModifierState("CapsLock");
+        if (flag) {
+        document.getElementById("feedback").innerHTML = "CapsLock activated";
+        } else {
+        document.getElementById("feedback").innerHTML =
+        "CapsLock not activated";
+      }
+    }
+   </script>`}
+          </code>
         </pre>
 
         {/* <!-- 79 --> */}
@@ -2857,7 +3619,7 @@ export const JavascriptInterviewQues = () => {
           illegal number (Not-a-Number) or not. i.e, This function returns true
           if the value equates to NaN. Otherwise it returns false.
         </p>
-        <pre>
+        {/* <pre>
           <code className="lang-javascript">
             <span className="hljs-built_in">isNaN</span>(
             <span className="hljs-string">"Hello"</span>);{" "}
@@ -2865,6 +3627,13 @@ export const JavascriptInterviewQues = () => {
             <span className="hljs-built_in">isNaN</span>(
             <span className="hljs-string">"100"</span>);{" "}
             <span className="hljs-comment">//false</span>
+          </code>
+        </pre> */}
+
+        <pre>
+          <code>
+            {`isNaN("Hello"); //true
+isNaN("100"); //false`}
           </code>
         </pre>
 

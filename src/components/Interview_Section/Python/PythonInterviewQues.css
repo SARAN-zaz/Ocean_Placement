@@ -21,10 +21,11 @@ pre {
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: now;
+  white-space: pre;
   width: 500px;
   margin-bottom: 15px;
 }
+
 h4 {
   color: #2097f3;
 }

@@ -1,0 +1,100 @@
+.main-container-interview-questions{
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+  
+@media (max-width: 1000px) {
+  .img-cls {
+    width: 700px;
+  }
+}
+
+@media (max-width: 800px) {
+  .img-cls {
+    width: 600px;
+  }
+  .second-img {
+    width: 400px;
+  }
+}
+@media (max-width: 650px) {
+  pre {
+    width: 500px;
+  }
+  .img-cls {
+    width: 500px;
+  }
+  .second-img {
+    width: 350px;
+  }
+}
+@media (max-width: 550px) {
+  pre {
+    width: 450px;
+  }
+  .img-cls {
+    width: 450px;
+  }
+  .second-img {
+    width: 300px;
+  }
+}
+@media (max-width: 500px) {
+  pre {
+    width: 400px;
+  }
+  .img-cls {
+    width: 400px;
+  }
+  .second-img {
+    width: 20px;
+  }
+}
+@media (max-width: 450px) {
+  pre {
+    width: 350px;
+  }
+  .img-cls {
+    width: 320px;
+  }
+  .second-img {
+    width: 200px;
+  }
+}
+@media (max-width: 400px) {
+  pre {
+    width: 300px;
+  }
+  .img-cls {
+    width: 300px;
+  }
+  .second-img {
+    width: 180px;
+  }
+}
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}

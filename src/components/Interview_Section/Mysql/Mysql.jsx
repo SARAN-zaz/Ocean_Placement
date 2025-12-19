@@ -32,7 +32,7 @@ export const Mysql = () => {
         </div>
       </div>
 
-      <section>
+      <section className="question-answer">
         {/* <!-- 1 --> */}
         <h4 id="1-what-is-sql-">1. What is SQL?</h4>
         <p>
@@ -308,11 +308,17 @@ export const Mysql = () => {
           </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">DATABASE</span> mydatabase;
             <span className="hljs-keyword">USE</span> mydatabase;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE DATABASE mydatabase;
+USE mydatabase;`}
           </code>
         </pre>
         {/* <!-- 12 --> */}
@@ -320,7 +326,7 @@ export const Mysql = () => {
           12. Write a query to create a table?
         </h4>
         <h6 id="syntax-">SYNTAX:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-type">CREATE</span>{" "}
             <span className="hljs-type">TABLE</span> table_name ( column1 data
@@ -328,9 +334,19 @@ export const Mysql = () => {
             <span className="hljs-keyword">type</span>, column3 data
             <span className="hljs-keyword">type</span>, ... );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+    ...
+);`}
+          </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> employees ( employee_id{" "}
@@ -345,17 +361,35 @@ export const Mysql = () => {
             <span className="hljs-built_in">DATE</span>
             );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    hire_date DATE
+);`}
+          </code>
         </pre>
         {/* <!-- 13 --> */}
         <h4 id="13-write-a-query-to-view-the-table-structure-">
           13. Write a query to view the table structure?
         </h4>
         <h6 id="syntax-">SYNTAX:</h6>
-        <pre>
+        {/* <pre>
           <code>
             DESCRIBE tablename<span className="hljs-comment">;</span>
             <span className="hljs-keyword">Or</span>DESC tablename
             <span className="hljs-comment">;</span>
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`DESCRIBE tablename;
+        Or
+DESC tablename;`}
           </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
@@ -502,21 +536,33 @@ export const Mysql = () => {
           18. Write a query to drop the table or database;
         </h4>
         <h6 id="syntax-">SYNTAX:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">DROP</span>{" "}
             <span className="hljs-keyword">TABLE</span> your_table_name;
             <span className="hljs-keyword">DROP</span>{" "}
             <span className="hljs-keyword">DATABASE</span> your_database_name;
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`DROP TABLE your_table_name;
+DROP DATABASE your_database_name;`}
+          </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">DROP</span>{" "}
             <span className="hljs-keyword">TABLE</span> employees;
             <span className="hljs-keyword">DROP</span>{" "}
             <span className="hljs-keyword">DATABASE</span> mydatabase;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`DROP TABLE employees;
+DROP DATABASE mydatabase;`}
           </code>
         </pre>
 
@@ -548,7 +594,7 @@ export const Mysql = () => {
           values and cannot have NULLs. It is used to uniquely identify each
           record in a table.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> example (
@@ -558,6 +604,14 @@ export const Mysql = () => {
             <span className="hljs-keyword">name</span>{" "}
             <span className="hljs-built_in">VARCHAR</span>(
             <span className="hljs-number">50</span>) );
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE example (
+    id INT PRIMARY KEY,
+    name VARCHAR(50)
+);`}
           </code>
         </pre>
 
@@ -569,7 +623,7 @@ export const Mysql = () => {
           integrity. The foreign key column in one table refers to the primary
           key column in another table.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> orders ( order_id{" "}
@@ -578,6 +632,15 @@ export const Mysql = () => {
             <span className="hljs-built_in">INT</span>, FOREIGN{" "}
             <span className="hljs-keyword">KEY</span> (product_id){" "}
             <span className="hljs-keyword">REFERENCES</span> products(product_id) );
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    product_id INT,
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);`}
           </code>
         </pre>
 
@@ -588,7 +651,7 @@ export const Mysql = () => {
           Ensures that all values in a column or a combination of columns are
           unique. Unlike a primary key, a unique constraint allows NULL values.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> employees ( employee_id{" "}
@@ -599,6 +662,14 @@ export const Mysql = () => {
             <span className="hljs-keyword">UNIQUE</span>
             );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE employees (
+    employee_id INT UNIQUE,
+    email VARCHAR(100) UNIQUE
+);`}
+          </code>
         </pre>
 
         {/* <!-- 23 --> */}
@@ -607,7 +678,7 @@ export const Mysql = () => {
           Restricts the range of values that a column can contain. It specifies
           a condition that must be satisfied for each row in the table.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> students ( student_id{" "}
@@ -616,12 +687,20 @@ export const Mysql = () => {
             <span className="hljs-keyword">CHECK</span> (age &gt;={" "}
             <span className="hljs-number">18</span>) );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE students (
+    student_id INT,
+    age INT CHECK (age >= 18)
+);`}
+          </code>
         </pre>
 
         {/* <!-- 24 --> */}
         <h4 id="24-what-is-not-null-">24. What is NOT NULL?</h4>
         <p>Ensures that a column cannot contain NULL values.</p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> contacts ( contact_id{" "}
@@ -633,6 +712,14 @@ export const Mysql = () => {
             <span className="hljs-literal">NULL</span>
             );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE contacts (
+    contact_id INT PRIMARY KEY,
+    phone_number VARCHAR(15) NOT NULL
+);`}
+          </code>
         </pre>
         {/* <!-- 25 --> */}
         <h4 id="25-what-is-default-">25. What is DEFAULT?</h4>
@@ -640,7 +727,7 @@ export const Mysql = () => {
           Provides a default value for a column when no value is specified
           during the INSERT operation.
         </p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">TABLE</span> products ( product_id{" "}
@@ -651,6 +738,14 @@ export const Mysql = () => {
             <span className="hljs-number">0</span>
             );
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    stock_quantity INT DEFAULT 0
+);`}
+          </code>
         </pre>
 
         {/* <!-- 26 --> */}
@@ -658,7 +753,7 @@ export const Mysql = () => {
           26. Write a query to insert the data?
         </h4>
         <h6 id="syntax-">SYNTAX:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">INSERT</span>{" "}
             <span className="hljs-keyword">INTO</span> yourTableName (column1,
@@ -668,9 +763,15 @@ export const Mysql = () => {
             <span className="hljs-string">'value2'</span>,{" "}
             <span className="hljs-string">'value3'</span>);
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`INSERT INTO yourTableName (column1, column2, column3)
+VALUES ('value1', 'value2', 'value3');`}
+          </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-selector-tag">INSERT</span>{" "}
             <span className="hljs-selector-tag">INTO</span>{" "}
@@ -692,6 +793,15 @@ export const Mysql = () => {
             <span className="hljs-string">'Johnson'</span>,{" "}
             <span className="hljs-string">'bob.johnson@email.com'</span>,{" "}
             <span className="hljs-string">'2022-03-25'</span>);
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`INSERT INTO employees (employee_id, first_name, last_name, email, hire_date)
+VALUES
+    (1, 'John', 'Doe', 'john.doe@email.com', '2022-01-15'),
+    (2, 'Jane', 'Smith', 'jane.smith@email.com', '2022-02-20'),
+    (3, 'Bob', 'Johnson', 'bob.johnson@email.com', '2022-03-25');`}
           </code>
         </pre>
         <h6 id="output-">OUTPUT:</h6>
@@ -783,16 +893,23 @@ export const Mysql = () => {
           30. Write a query to update the record in the table?
         </h4>
         <h6 id="syntax-">SYNTAX:</h6>
-        <pre>
+        {/* <pre>
           <code>
             UPDATE yourTableName
             <span className="hljs-keyword">SET</span> column1{" "}
             <span className="hljs-comment">= value1, column2 = value2, ...</span>
             WHERE <span className="hljs-comment">condition</span>;
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`UPDATE yourTableName
+      SET column1 = value1, column2 = value2, ...
+      WHERE condition;`}
+          </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">
               -- Update the email for an employee with employee_id = 1
@@ -804,6 +921,16 @@ export const Mysql = () => {
             <span className="hljs-number">1</span>;
             <span className="hljs-keyword">SELECT</span> *{" "}
             <span className="hljs-keyword">FROM</span> employees;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`-- Update the email for an employee with employee_id = 1
+      UPDATE employees
+      SET email = 'new.email@example.com'
+      WHERE employee_id = 1;
+      
+      SELECT * FROM employees;`}
           </code>
         </pre>
         <h6 id="output-">OUTPUT:</h6>
@@ -829,7 +956,7 @@ export const Mysql = () => {
           </code>
         </pre>
         <h6 id="query-">QUERY:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-comment">
               -- Delete the employee with employee_id = 1
@@ -838,6 +965,12 @@ export const Mysql = () => {
             <span className="hljs-keyword">FROM</span> employees{" "}
             <span className="hljs-keyword">WHERE</span> employee_id ={" "}
             <span className="hljs-number">1</span>;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`-- Delete the employee with employee_id = 1
+      DELETE FROM employees WHERE employee_id = 1;`}
           </code>
         </pre>
         <h6 id="output-">OUTPUT:</h6>
@@ -1085,7 +1218,7 @@ export const Mysql = () => {
           43. How do you create a stored procedure in MySQL?
         </h4>
         <p>The syntax to create a stored procedure is:</p>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-function">
@@ -1097,6 +1230,14 @@ export const Mysql = () => {
               <span className="hljs-title">statements</span>
               <span className="hljs-title">END</span>;
             </span>
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE PROCEDURE procedure_name(parameters)
+      BEGIN
+          -- SQL statements
+      END;`}
           </code>
         </pre>
 
@@ -1150,7 +1291,7 @@ export const Mysql = () => {
           47. Can you provide an example of a stored procedure that takes
           parameters?
         </h4>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-function">
@@ -1168,6 +1309,14 @@ export const Mysql = () => {
               <span className="hljs-title">employee_id</span>;
             </span>
             <span className="hljs-keyword">END</span>;
+          </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE PROCEDURE GetEmployee(IN employee_id INT)
+      BEGIN
+          SELECT * FROM employees WHERE id = employee_id;
+      END;`}
           </code>
         </pre>
 
@@ -1203,7 +1352,7 @@ export const Mysql = () => {
           expressions.
         </p>
         <h6 id="create-a-function-">CREATE A FUNCTION:</h6>
-        <pre>
+        {/* <pre>
           <code>
             <span className="hljs-keyword">CREATE</span>{" "}
             <span className="hljs-keyword">FUNCTION</span> my_function(parameter{" "}
@@ -1214,8 +1363,18 @@ export const Mysql = () => {
             <span className="hljs-comment">-- Function logic here</span>
             <span className="hljs-keyword">END</span>; ```
           </code>
+        </pre> */}
+        <pre>
+          <code>
+            {`CREATE FUNCTION my_function(parameter INT)
+      RETURNS INT
+      BEGIN
+          -- Function logic here
+      END;
+      `}
+          </code>
         </pre>
       </section>
     </div>
   );
-};
+}; 

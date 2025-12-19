@@ -1,0 +1,35 @@
+.main-container-interview-questions{
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+ .question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+  
+@media (max-width: 800px) {
+
+  .main-container-interview-questions{
+    padding: 20px;
+  width: 98%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}
+@media(max-width:480px){
+  .main-container-interview-questions{
+    padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+.img-class-language-logo {
+  height: 115px;
+  width: 256px;
+  object-fit: contain;
+}
+}

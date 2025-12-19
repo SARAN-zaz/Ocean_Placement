@@ -58,6 +58,7 @@ const TechSection = () => {
       name: "React js",
       bg: "linear-gradient(to right, #00d8ff, #61dafb)",
       icon: images.react,
+      route: "/React-interview-questions-answers"
     },
     {
       name: "Angular",
@@ -69,47 +70,56 @@ const TechSection = () => {
       name: "Flutter",
       bg: "linear-gradient(to right, #02569B, #039BE5)",
       icon: images.flutter,
+      route:"/Flutter-interview-questions-answers"
     },
     {
       name: "UI/UX",
       bg: "linear-gradient(to right, #ff0099, #493240)",
       icon: images.ux,
+      route: "/UIUX-interview-questions-answers"
     },
     {
       name: "Django",
       bg: "linear-gradient(to right, #092E20, #0b3b2a)",
       icon: images.django,
+      route: "/Django-interview-questions-answers"
     },
     {
       name: "HTML",
       bg: "linear-gradient(to right, #E44D26, #F16529)",
       icon: images.html,
+      route: "/HTML-interview-questions-answers"
     },
 
     {
       name: "CSS",
       bg: "linear-gradient(to right, #264de4, #2965f1)",
       icon: images.css,
+      route: "/CSS-interview-questions-answers"
     },
     {
       name: "Software Testing",
       bg: "linear-gradient(to right, #7b4397, #dc2430)",
       icon: images.testing,
+      route: "/SoftwareTesting-interview-questions-answers"
     },
     {
       name: "Bootstrap",
       bg: "linear-gradient(to right, #563d7c, #7952b3)",
       icon: images.bootstrap,
+      route: "/Bootstrap-interview-questions-answers"
     },
     {
       name: "SpringBoot",
       bg: "linear-gradient(to right, #6db33f, #3a7d2e)",
       icon: images.spring,
+      route:"/Springboot-interview-questions-answers"
     },
     {
       name: "Data Analytics",
       bg: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
       icon: images.analytics,
+      route: "/DataAnalytics-interview-questions-answers"
     },
   ];
 

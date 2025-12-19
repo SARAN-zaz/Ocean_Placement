@@ -1,0 +1,51 @@
+.main-container-interview-questions{
+  padding: 20px;
+  width:80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.img-class-language-logo {
+  width: 230px; /* Set your desired width */
+  height: 230px; /* Set your desired height */
+}
+
+.question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+@media (max-width: 800px) {
+  .img-cls {
+    width: 400px;
+    
+  }
+  .main-container-interview-questions{
+    padding: 10px;
+    width:100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  }
+}
+@media (max-width: 500px) {
+  pre {
+      width: 328px;
+  }
+}

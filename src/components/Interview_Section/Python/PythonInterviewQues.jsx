@@ -4,11 +4,13 @@ import images from "../../../assets/Python/index";
 
 export const PythonInterviewQues = () => {
   return (
-    <div class="main-container-interview-questions">
+    <div className="main-container-interview-questions">
       <div>
-        <p class="main-heading-q-a">Python Interview Questions and Answers</p>
-        <div class="main-heading-interview-questions-answers">
-          <img class="img-class-language-logo" src={images.pythonlogo} />
+        <p className="main-heading-q-a">
+          Python Interview Questions and Answers
+        </p>
+        <div className="main-heading-interview-questions-answers">
+          <img className="img-class-language-logo" src={images.pythonlogo} />
           <p>
             Python is a high-level, interpreted language known for its
             simplicity and readability, making it ideal for beginners and
@@ -250,7 +252,7 @@ export const PythonInterviewQues = () => {
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Ten10} alt="output10" class="img-cls" />
+          <img src={images.Ten10} alt="output10" className="img-cls" />
         </p>
 
         {/* <!-- 11 --> */}
@@ -280,7 +282,7 @@ print("Addition:", addition)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Eleven11} alt="output11" class="img-cls" />
+          <img src={images.Eleven11} alt="output11" className="img-cls" />
         </p>
         {/* <!-- 12 --> */}
 
@@ -308,7 +310,7 @@ print("The square root of %0.3f is %0.3f" % (num, num_sqrt))`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Twelve12} alt="output12" class="img-cls" />
+          <img src={images.Twelve12} alt="output12" className="img-cls" />
         </p>
 
         {/* <!-- 13 --> */}
@@ -338,7 +340,7 @@ print("Area of triangle", area)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Thirteen13} alt="output13" class="img-cls" />
+          <img src={images.Thirteen13} alt="output13" className="img-cls" />
         </p>
 
         {/* <!-- 14 --> */}
@@ -371,7 +373,7 @@ print("cube root of", num, "is", cube_root)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourteen14} alt="output14" class="img-cls" />
+          <img src={images.Fourteen14} alt="output14" className="img-cls" />
         </p>
 
         {/* <!-- 15 --> */}
@@ -405,7 +407,7 @@ print("Area of rectangle", area)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fifteen15} alt="output15" class="img-cls" />
+          <img src={images.Fifteen15} alt="output15" className="img-cls" />
         </p>
 
         {/* <!-- 16 --> */}
@@ -455,7 +457,7 @@ print("The value of y after swapping:", y)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Sixteen16} alt="output16" class="img-cls" />
+          <img src={images.Sixteen16} alt="output16" className="img-cls" />
         </p>
 
         {/* <!-- 17 --> */}
@@ -496,7 +498,7 @@ print("y =", y)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Seventeen17} alt="output17" class="img-cls" />
+          <img src={images.Seventeen17} alt="output17" className="img-cls" />
         </p>
 
         {/* <!-- 18 --> */}
@@ -505,28 +507,30 @@ print("y =", y)`}
           18. What is the difference between list and tuples in python?
         </h4>
         <table>
-          <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Lists are mutable i.e they can be edited.</td>
-            <td>
-              Tuples are immutable (tuples are lists which can’t be edited).
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Lists are slower than tuples.</td>
-            <td>Tuples are faster than list.</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Syntax: list_1 = [10, &#39;fruits’, 20]</td>
-            <td>Syntax: tup_1 = (10, ‘fruits’ , 20)</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lists are mutable i.e they can be edited.</td>
+              <td>
+                Tuples are immutable (tuples are lists which can’t be edited).
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Lists are slower than tuples.</td>
+              <td>Tuples are faster than list.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Syntax: list_1 = [10, &#39;fruits’, 20]</td>
+              <td>Syntax: tup_1 = (10, ‘fruits’ , 20)</td>
+            </tr>
+          </thead>
         </table>
         <br />
 
@@ -696,7 +700,7 @@ else:
         </pre>
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Twentythree23} alt="output23" class="img-cls" />
+          <img src={images.Twentythree23} alt="output23" className="img-cls" />
         </p>
 
         {/* <!-- 25 --> */}
@@ -743,7 +747,7 @@ else:
         </pre>
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Twentyfour24} alt="output24" class="img-cls" />
+          <img src={images.Twentyfour24} alt="output24" className="img-cls" />
         </p>
 
         {/* <!-- 26 --> */}
@@ -777,7 +781,7 @@ print("Simple Interest =", simple_Interest)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Twentyfive25} alt="output25" class="img-cls" />
+          <img src={images.Twentyfive25} alt="output25" className="img-cls" />
         </p>
 
         {/* <!-- 27 --> */}
@@ -811,7 +815,7 @@ else:
         </pre>
 
         <h6 id="output-">Output:</h6>
-        <p class="two-images-para">
+        <p className="two-images-para">
           <img src={images.Twentysix26A} alt="output26A" />
           <img src={images.Twentysix26B} alt="output26B" />
         </p>
@@ -861,7 +865,7 @@ else:
         </pre>
 
         <h6 id="output-">Output:</h6>
-        <p class="two-images-para">
+        <p className="two-images-para">
           <img src={images.Twentyseven27A} alt="output27A" />
           <img src={images.Twentyseven27B} alt="output27B" />
         </p>
@@ -903,7 +907,7 @@ else:
         </pre>
 
         <h6 id="output-">Output:</h6>
-        <p class="two-images-para">
+        <p className="two-images-para">
           <img src={images.Twentyeight28A} alt="output28A" />
           <img src={images.Twentyeight28B} alt="output28B" />
         </p>
@@ -1107,7 +1111,7 @@ say_hello()`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Thirtyfour34} alt="output34" class="img-cls" />
+          <img src={images.Thirtyfour34} alt="output34" className="img-cls" />
         </p>
 
         {/* <!-- 36 --> */}
@@ -1233,10 +1237,18 @@ finally:
         </pre>
 
         <h6 id="output-">Output:</h6>
-        <p class="two-images-para">
-          <img src={images.Thirtyseven37} alt="output37" class="img-cls" />
-          <img src={images.Thirtyseven37A} alt="output37A" class="img-cls" />
-          <img src={images.Thirtyseven37B} alt="output37B" class="img-cls" />
+        <p className="two-images-para">
+          <img src={images.Thirtyseven37} alt="output37" className="img-cls" />
+          <img
+            src={images.Thirtyseven37A}
+            alt="output37A"
+            className="img-cls"
+          />
+          <img
+            src={images.Thirtyseven37B}
+            alt="output37B"
+            className="img-cls"
+          />
         </p>
 
         {/* <!-- 39 --> */}
@@ -1287,7 +1299,7 @@ else:
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Thirtyeight38} alt="output38" class="img-cls" />
+          <img src={images.Thirtyeight38} alt="output38" className="img-cls" />
         </p>
 
         {/* <!-- 40 --> */}
@@ -1323,7 +1335,7 @@ print("Sum =", sum)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Thirtynine39} alt="output39" class="img-cls" />
+          <img src={images.Thirtynine39} alt="output39" className="img-cls" />
         </p>
 
         {/* <!-- 41 --> */}
@@ -1377,7 +1389,7 @@ print("Sum =", sum)`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourty40} alt="output40" class="img-cls" />
+          <img src={images.Fourty40} alt="output40" className="img-cls" />
         </p>
 
         {/* <!-- 43 --> */}
@@ -1497,7 +1509,7 @@ print(my_cat.speak())   # Output: Whiskers says Meow!`}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtytwo42} alt="output42" class="img-cls" />
+          <img src={images.Fourtytwo42} alt="output42" className="img-cls" />
         </p>
 
         {/* <!-- 43 --> */}
@@ -1577,7 +1589,7 @@ print(my_cat.speak())   `}
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtythree43} alt="output43" class="img-cls" />
+          <img src={images.Fourtythree43} alt="output43" className="img-cls" />
         </p>
 
         {/* <!-- 44 --> */}
@@ -1638,7 +1650,7 @@ else:
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtyfour44} alt="output44" class="img-cls" />
+          <img src={images.Fourtyfour44} alt="output44" className="img-cls" />
         </p>
 
         {/* <!-- 45 --> */}
@@ -1682,7 +1694,7 @@ for i in range(1, n + 1):
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtyfive45} alt="output45" class="img-cls" />
+          <img src={images.Fourtyfive45} alt="output45" className="img-cls" />
         </p>
 
         {/* <!-- 46 --> */}
@@ -1716,8 +1728,8 @@ for i in range(1, n + 1):
           </code>
         </pre> */}
         <pre>
-  <code>
-{`string = input("enter the string:")
+          <code>
+            {`string = input("enter the string:")
 newString = ""
 length = len(string) - 1
 for i in range(length, -1, -1):
@@ -1726,12 +1738,12 @@ if newString == string:
     print("palindrome")
 else:
     print("not palindrome")`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtysix46} alt="output46" class="img-cls" />
+          <img src={images.Fourtysix46} alt="output46" className="img-cls" />
         </p>
 
         {/* <!-- 47 --> */}
@@ -1754,18 +1766,18 @@ else:
         </pre> */}
 
         <pre>
-  <code>
-{`str = "OCEAN"
+          <code>
+            {`str = "OCEAN"
 i = 0
 while i < len(str):
     print(str[i])
     i += 1`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtyseven47} alt="output47" class="img-cls" />
+          <img src={images.Fourtyseven47} alt="output47" className="img-cls" />
         </p>
 
         {/* <!-- 48 --> */}
@@ -1782,20 +1794,20 @@ while i < len(str):
           </code>
         </pre> */}
         <pre>
-  <code>
-{`def mystring(name):
+          <code>
+            {`def mystring(name):
     count = 0
     for i in name:
         count += 1
     print("length of the string:", count)
 
 mystring("Hiocean")`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtyeight48} alt="output48" class="img-cls" />
+          <img src={images.Fourtyeight48} alt="output48" className="img-cls" />
         </p>
 
         {/* <!-- 49 --> */}
@@ -1812,13 +1824,13 @@ mystring("Hiocean")`}
           </code>
         </pre> */}
         <pre>
-  <code>
-{`*
+          <code>
+            {`*
 *         *       
 *         *         *
 *         *         *        *`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="program-">Program:</h6>
         {/* <pre>
@@ -1841,17 +1853,17 @@ mystring("Hiocean")`}
         </pre> */}
 
         <pre>
-  <code>
-{`for i in range(1, 5):
+          <code>
+            {`for i in range(1, 5):
     for j in range(1, i + 1):
         print("* ", end="")
     print()`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fourtynine49} alt="output49" class="img-cls" />
+          <img src={images.Fourtynine49} alt="output49" className="img-cls" />
         </p>
 
         {/* <!-- 50 --> */}
@@ -1877,14 +1889,14 @@ mystring("Hiocean")`}
           </code>
         </pre> */}
         <pre>
-  <code>
-{`1
+          <code>
+            {`1
 2 2
 3 3 3
 4 4 4 4
 5 5 5 5 5`}
-  </code>
-</pre>
+          </code>
+        </pre>
 
         <h6 id="program-">Program:</h6>
         {/* <pre>
@@ -1910,18 +1922,18 @@ mystring("Hiocean")`}
         </pre> */}
 
         <pre>
-  <code>
-{`rows = 6
+          <code>
+            {`rows = 6
 for num in range(1, rows):
     for i in range(1, num + 1):
         print(num, end=" ")
-    print()`} 
-  </code>
-</pre>
+    print()`}
+          </code>
+        </pre>
 
         <h6 id="output-">Output:</h6>
         <p>
-          <img src={images.Fivfty50} alt="output50" class="img-cls" />
+          <img src={images.Fivfty50} alt="output50" className="img-cls" />
         </p>
       </div>
     </div>

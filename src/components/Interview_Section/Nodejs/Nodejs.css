@@ -1,4 +1,4 @@
-.main-container-interview-questions{
+.main-container-interview-questions {
   padding: 20px;
   width: 80%;
   max-width: 1400px;
@@ -8,6 +8,26 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+}
+
+/* pre {
+  padding: 15px;
+  background-color: #0000001c;
+  color: #100f0f;
+  display: inline-block;
+  border-radius: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: now;
+  width: 500px;
+  margin-bottom: 15px;
+} */
+
+.question-answer h4 {
+  margin-bottom: 8px;
+}
+.question-answer p {
+  margin-bottom: 16px;
 }
 
 td,
@@ -21,23 +41,21 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 @media (max-width: 800px) {
-
-  .main-container-interview-questions{
+  .main-container-interview-questions {
     padding: 20px;
-  width: 97%;
-  max-width: 1400px;
-  margin-inline: auto;
+    width: 97%;
+    max-width: 1400px;
+    margin-inline: auto;
   }
 }
 @media (max-width: 480px) {
-
-  .main-container-interview-questions{
+  .main-container-interview-questions {
     padding: 10px;
-    width:100%;
-  max-width: 1400px;
-  margin-inline: auto;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
   }
   pre {
     width: 305px;
-}
+  }
 }

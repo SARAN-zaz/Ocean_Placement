@@ -37,7 +37,7 @@ export const Mangodb = () => {
         </div>
     </div>
 
-    <div>
+    <div className="question-answer">
         {/* <!-- 1 --> */}
         <h4>1. What is MongoDB?</h4>
         <p>
@@ -251,13 +251,24 @@ export const Mangodb = () => {
             the author field with the corresponding <code>author</code> documents, you can
             use the <code>populate</code> method as follows:
         </p>
-        <pre><code>Book.find().populate(<span class="hljs-string">'author'</span>).exec(<span class="hljs-function"><span class="hljs-params">(err, books)</span> =&gt;</span> &#123;
+        {/* <pre><code>Book.find().populate(<span class="hljs-string">'author'</span>).exec(<span class="hljs-function"><span class="hljs-params">(err, books)</span> =&gt;</span> &#123;
     <span class="hljs-keyword">if</span> (err) &#123;
         <span class="hljs-built_in">console</span>.error(err);
         <span class="hljs-keyword">return</span>;
     &#125;
     <span class="hljs-built_in">console</span>.log(books);
-&#125;);</code></pre>
+&#125;);</code></pre> */}
+<pre>
+    <code>
+        {`Book.find().populate('author').exec((err, books) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(books);
+});`}
+    </code>
+</pre>
         <h4>23. Explain the concept of gridFS in MongoDB.</h4>
         <p>
             GridFS is a specification for storing and retrieving large files in MongoDB.
@@ -301,11 +312,21 @@ export const Mangodb = () => {
             For example, suppose you have a collection of <code>books</code> with
             documents like this:
         </p>
-        <pre><code>[
+        {/* <pre><code>[
     &#123; <span class="hljs-string">_id:</span> <span class="hljs-number">1</span>, <span class="hljs-string">title:</span> <span class="hljs-string">'Book 1'</span>, <span class="hljs-string">author:</span> <span class="hljs-string">'Author 1'</span>, <span class="hljs-string">category:</span> <span class="hljs-string">'Fiction'</span> &#125;,
     &#123; <span class="hljs-string">_id:</span> <span class="hljs-number">2</span>, <span class="hljs-string">title:</span> <span class="hljs-string">'Book 2'</span>, <span class="hljs-string">author:</span> <span class="hljs-string">'Author 2'</span>, <span class="hljs-string">category:</span> <span class="hljs-string">'Non-Fiction'</span> &#125;,
     &#123; <span class="hljs-string">_id:</span> <span class="hljs-number">3</span>, <span class="hljs-string">title:</span> <span class="hljs-string">'Book 3'</span>, <span class="hljs-string">author:</span> <span class="hljs-string">'Author 1'</span>, <span class="hljs-string">category:</span> <span class="hljs-string">'Fiction'</span> &#125;,
-]</code></pre>
+]</code></pre> */}
+
+<pre>
+    <code>
+        {`[
+    { _id: 1, title: 'Book 1', author: 'Author 1', category: 'Fiction' },
+    { _id: 2, title: 'Book 2', author: 'Author 2', category: 'Non-Fiction' },
+    { _id: 3, title: 'Book 3', author: 'Author 1', category: 'Fiction' },
+]`}
+    </code>
+</pre>
         <p>
             If you want to find all fiction books by &#39;Author 1&#39;, you would use the
             <code>find</code> method like this:
@@ -594,14 +615,26 @@ export const Mangodb = () => {
             field.
         </p>
         <p>Here&#39;s an example:</p>
-        <pre><code>db<span class="hljs-selector-class">.collection</span><span class="hljs-selector-class">.aggregate</span>([
+        {/* <pre><code>db<span class="hljs-selector-class">.collection</span><span class="hljs-selector-class">.aggregate</span>([
     &#123;
         <span class="hljs-variable">$group</span>: &#123;
             _id: null,
             averageValue: &#123; <span class="hljs-variable">$avg</span>: <span class="hljs-string">"$fieldName"</span> &#125;
         &#125;
     &#125;
-])</code></pre>
+])</code></pre> */}
+<pre>
+    <code>
+        {`db.collection.aggregate([
+    {
+        $group: {
+            _id: null,
+            averageValue: { $avg: "$fieldName" }
+        }
+    }
+])`}
+    </code>
+</pre>
         <h4>50. How does MongoDB handle index intersection in query optimization?</h4>
         <p>
             MongoDB can use multiple indexes to optimize queries through index

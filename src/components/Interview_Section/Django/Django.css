@@ -4,27 +4,20 @@
     max-width: 1400px;
     margin-inline: auto;
   }
-  .img-class-language-logo{
-    width: 210px;
-    height: 210px;
-  }
-      .question-answer h4{
+
+  .question-answer h4{
     margin-bottom:8px ;
   }
   .question-answer p {
     margin-bottom: 16px;
   }
-  @media (max-width: 800px) {
-    .img-cls {
-      width: 400px;
-      
-    }
-    pre {
-      width: 350px;
+  
+  .img-class-language-logo{
+    width: 210px;
+    height: 210px;
   }
-  .precode {
-    width: 294px;
-}
+  @media (max-width: 800px) {
+
     .main-container-interview-questions{
       padding: 10px;
     width:100%;
@@ -32,3 +25,15 @@
     margin-inline: auto;
     }
   }
+  @media screen and (min-width: 768px) {
+    .sql-code {
+        width:360px; /* Adjust width for larger screens */
+        margin: auto; /* Center the code block */
+    }
+    
+  }
+  @media (max-width: 500px) {
+    pre {
+        width: 295px;
+    }
+}

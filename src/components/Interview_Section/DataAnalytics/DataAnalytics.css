@@ -1,0 +1,52 @@
+.imag-class-css {
+  width: 71%;
+  object-fit: contain;
+}
+.main-container-interview-questions{
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+  .question-answer h4{
+    margin-bottom:8px ;
+  }
+  .question-answer p {
+    margin-bottom: 16px;
+  }
+  
+.img-class-language-logo{
+  width: 220px;
+  height: 220px;
+}
+@media (max-width: 800px) {
+  .img-cls{
+   width: 300px;
+  }
+
+    .main-container-interview-questions{
+      padding: 10px;
+    width:100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    }
+  }
+
+
+
+/* For larger screens (e.g., tablets, desktops) */
+@media screen and (min-width: 768px) {
+  .sql-code {
+      width:450px; /* Adjust width for larger screens */
+      margin: auto; /* Center the code block */
+  }
+}
+@media (max-width: 500px) {
+  pre {
+      width: 329px;
+  }
+}
+
+
+
